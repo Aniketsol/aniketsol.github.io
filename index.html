@@ -146,67 +146,61 @@
 	    </div>
 	  </nav>
 	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url();">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Aniket Solanki</span></h1>
+  <div class="home-slider owl-carousel">
+    <div class="slider-item">
+      <div class="overlay"></div>
 
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
+      <div class="container">
+        <!-- changed: align-items-center + justify-content-start -->
+        <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-start">
 
-						<script>
+          <!-- changed: removed the empty image column completely -->
 
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
+          <!-- changed: text container is now full width on desktop -->
+          <div class="col-md-10 col-lg-8 d-flex align-items-center ftco-animate">
+            <div class="text">
+              <span class="subheading">Hello!</span>
+              <h1 class="mb-4 mt-3">I'm <span>Aniket Solanki</span></h1>
 
-						// Create an array of typing text
-						const typingTexts = [
-						'Business Analyst  '
-						];
+              <span id="typing-animation"></span>
 
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
+              <script>
+                const typingAnimationElement = document.getElementById('typing-animation');
+                const typingTexts = ['Power BI Data Analyst  ']; // changed title
 
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
+                function playTypingAnimation(text) {
+                  for (let i = 0; i < text.length; i++) {
+                    setTimeout(() => {
+                      typingAnimationElement.textContent += text[i];
+                    }, i * 120);
+                  }
 
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
+                  setTimeout(() => {
+                    typingAnimationElement.textContent = '';
+                    playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                  }, text.length * 120 + 800);
+                }
 
-						</script>
+                playTypingAnimation(typingTexts[0]);
+              </script>
 
-						<br>
-						<br>
-			            <h2>Transforming Data into Visual Stories</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://www.linkedin.com/in/aniket-solanki-7618691a6/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
-							<a href="https://github.com/Aniketsol" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
+              <br><br>
+              <h2>Transforming Data into Visual Stories</h2>
+
+              <p>
+                <a href="https://www.linkedin.com/in/aniket-solanki-7618691a6/" class="btn btn-primary py-3 px-4">LinkedIn</a>
+                <a href="https://github.com/Aniketsol" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -228,39 +222,39 @@
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
 										<p><span class="title-s">Name: </span> <span>Aniket Solanki</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Business Analyst</span></p>
-										<p><span class="title-s">Address: </span> <span>Parramatta, NSW , Australia </span></p>
+										<p><span class="title-s">Job Role: </span> <span>Power BI Data Analyst</span></p>
+										<p><span class="title-s">Location: </span> <span>Parramatta, NSW , Australia </span></p>
 									  </div>
 									</div>
 								  </div>
 							   <div class="skill-mf">
 									<p class="title-s">Skills</p>
 
-									<span>Power BI & Tableau</span> <span class="pull-right">90%</span>
+									<span>Power BI & Tableau : </span> <span class="pull-right">90%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 
-									<span>SQL & Data Analysis</span> <span class="pull-right">95%</span>
+									<span>SQL & Data Analysis : </span> <span class="pull-right">95%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 
-									<span>Cloud Platforms </span> <span class="pull-right">85%</span>
+									<span>Cloud Platforms : </span> <span class="pull-right">85%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 
-									<span>Data Cleaning & Preprocessing</span> <span class="pull-right">90%</span>
+									<span>Data Cleaning & Preprocessing : </span> <span class="pull-right">90%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 
-									<span>Advance Microsoft Office </span> <span class="pull-right">95%</span>
+									<span>Advanced Excel & Microsoft Office : </span> <span class="pull-right">95%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
 											aria-valuemax="100"></div>
@@ -291,19 +285,19 @@
 								<h2 class="mb-4">About Me</h2>
 								
 								<p><li class="d-flex"><span><p><li class="d-flex"><span>
-<p><li class="d-flex"><span>
-Aspiring Business Analyst with a strong foundation in data-driven decision-making. Currently pursuing a Master’s in Business Analytics at the University of Technology Sydney and holding a Bachelor’s degree in Computer Engineering from Mumbai University.
-</span></li></p>
+<p>
+Power BI Data Analyst with hands-on experience delivering executive dashboards, KPI reporting, and automated ETL pipelines.
+Strong expertise in Power BI, SQL, DAX, and Python, with a proven ability to transform multi-source data into business-ready insights.
+</p>
 
-<p><li class="d-flex"><span>
-Experienced in transforming complex data into actionable insights through visualization, reporting, and process optimization. Proficient in Power BI, Tableau, SQL, and Python. Certified in AWS Cloud Practitioner and PL‑300 (Power BI Data Analyst), reinforcing my ability to handle cloud-based solutions and design interactive, business-driven dashboards.
-</span></li></p>
+<p>
+Microsoft PL-300 and AWS Certified Cloud Practitioner, with experience working across cloud-based analytics solutions using AWS services such as S3, Glue, and Athena.
+Skilled in designing interactive dashboards and analytics solutions that support data-driven decision-making.
+</p>
 
-<p><li class="d-flex"><span>
-Passionate about solving business problems with clarity and precision. Skilled at analyzing trends, evaluating performance, and creating dashboards that help businesses make informed decisions.
-</span></li></p>
-
-
+<p>
+Experienced in analysing trends, evaluating performance, and building reporting solutions that translate complex data into clear, actionable insights for business stakeholders.
+</p>
 
 
 								</span></li></p>
@@ -342,11 +336,11 @@ Passionate about solving business problems with clarity and precision. Skilled a
 
 <!-- Element to contain animated typing -->
 
-    <section class="ftco-section ftco-no-pb" id="Education-section">
+<section class="ftco-section ftco-no-pb" id="Education-section">
   <div class="container">
     <div class="row justify-content-center pb-5">
       <div class="col-md-10 heading-section text-center ftco-animate">
-		<h1 class="big big-2">Education</h1>
+        <h1 class="big big-2">Education</h1>
         <h2 class="mb-4">Education</h2>
       </div>
     </div>
@@ -354,7 +348,7 @@ Passionate about solving business problems with clarity and precision. Skilled a
     <div class="row">
       <div class="col-md-6">
         <div class="resume-wrap ftco-animate">
-          <span class="date">2024 - Present</span>
+          <span class="date">Feb 2024 – Nov 2025</span>
           <h2>Master of Business Analytics</h2>
           <span class="position">University of Technology Sydney</span>
         </div>
@@ -362,7 +356,7 @@ Passionate about solving business problems with clarity and precision. Skilled a
 
       <div class="col-md-6">
         <div class="resume-wrap ftco-animate">
-          <span class="date">2019 - 2023</span>
+          <span class="date">Aug 2019 – Jul 2023</span>
           <h2>Bachelor of Computer Engineering</h2>
           <span class="position">Mumbai University</span>
         </div>
@@ -372,7 +366,7 @@ Passionate about solving business problems with clarity and precision. Skilled a
         <div class="resume-wrap ftco-animate">
           <span class="date">2017</span>
           <h2>Higher Secondary Certificate (HSC)</h2>
-          <span class="position">Mumbai University</span>
+          <span class="position">Maharashtra State Board</span>
         </div>
       </div>
     </div>
