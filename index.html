@@ -1,864 +1,1363 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Aniket Solanki Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aniket Solanki — Power BI Data Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    :root {
+      --white:    #ffffff;
+      --off:      #f7f6f3;
+      --light:    #eeece8;
+      --line:     #e2dfd9;
+      --ink:      #1a1916;
+      --ink2:     #3d3c39;
+      --muted:    #7a7873;
+      --accent:   #1d4ed8;
+      --accent-l: #eff3ff;
+      --accent-m: #bfcfff;
+      --green:    #15803d;
+      --green-l:  #dcfce7;
+      --amber:    #b45309;
+      --amber-l:  #fef3c7;
+      --r: 10px;
+      --r2: 16px;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans:  'Outfit', sans-serif;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.07), 0 2px 6px rgba(0,0,0,0.05);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.10), 0 4px 12px rgba(0,0,0,0.06);
+    }
 
-    <link rel="stylesheet" href="css/aos.css">
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background: var(--white);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+    ::selection { background: var(--accent-m); color: var(--ink); }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-thumb { background: var(--line); }
 
-	<style>
-  .about-info li span:last-child {
-    display: inline-block;
-    padding-left: 10px;
-    max-width: 85%;
-    line-height: 1.6;
-  }
-</style>
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: 60px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%;
+      transition: box-shadow 0.3s;
+    }
+    nav.up { box-shadow: var(--shadow-sm); }
 
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .nav-logo em { color: var(--accent); font-style: normal; }
 
-<style>
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--ink); }
 
-/*======================================
-//--//-->   ABOUT
-======================================*/
+    .nav-cta {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1.5px solid var(--accent-m);
+      padding: 6px 16px;
+      border-radius: 100px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-cta:hover { background: var(--accent); color: #fff; }
 
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
+    .burger { display: none; cursor: pointer; flex-direction: column; gap: 4px; }
+    .burger span { display: block; width: 20px; height: 1.5px; background: var(--ink); }
 
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
+    /* ─── HERO ─── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 60px;
+      overflow: hidden;
+      background: var(--off);
+    }
 
-.about-mf .about-img img {
-  margin-left: 10px;
-}
+    .hero-left {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 80px 5%;
+      max-width: 900px;
+      width: 100%;
+    }
+    .hero-left::after { display: none; }
 
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+    .hero-tag::before {
+      content: '';
+      width: 28px; height: 1.5px;
+      background: var(--accent);
+    }
 
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
+    .hero-h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .hero-h1 .line2 { color: var(--accent); display: block; }
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
+    .hero-role {
+      font-size: 1.05rem;
+      color: var(--muted);
+      font-weight: 300;
+      margin: 1.2rem 0 1.8rem;
+      min-height: 1.6em;
+    }
+    .hero-role span { border-right: 2px solid var(--accent); padding-right: 3px; }
 
+    .hero-bio {
+      font-size: 0.95rem;
+      color: var(--ink2);
+      line-height: 1.85;
+      font-weight: 300;
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+    }
 
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
+    .btn-solid {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--ink);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 12px 24px;
+      border-radius: 8px;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-solid:hover { background: var(--accent); transform: translateY(-1px); }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+      padding: 12px 24px;
+      border-radius: 8px;
+      border: 1.5px solid var(--line);
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .btn-outline:hover { border-color: var(--ink); transform: translateY(-1px); }
 
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
+    .hero-chips {
+      display: flex; gap: 8px; flex-wrap: wrap;
+      margin-top: 2.5rem; padding-top: 2.5rem;
+      border-top: 1px solid var(--line);
+    }
+    .chip {
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 100px;
+      border: 1.5px solid var(--line);
+      color: var(--ink2);
+      background: var(--off);
+    }
 
+    /* right side of hero */
+    .hero-right {
+      background: var(--off);
+      display: flex; flex-direction: column;
+      justify-content: center;
+      padding: 80px 5%;
+      gap: 2rem;
+    }
 
-/* project image zoom effect */
+    .hero-photo-wrap {
+      position: relative;
+      width: 100%; max-width: 280px;
+      margin: 0 auto;
+    }
+    .hero-photo-wrap img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: var(--r2);
+      display: block;
+      box-shadow: var(--shadow-lg);
+    }
+    .hero-photo-initials {
+      width: 100%; max-width: 280px;
+      aspect-ratio: 3/4;
+      background: var(--light);
+      border-radius: var(--r2);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--accent);
+      box-shadow: var(--shadow-lg);
+    }
+    .hero-photo-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      padding: 8px 18px;
+      box-shadow: var(--shadow-sm);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--ink2);
+      margin-bottom: 2rem;
+    }
+    .badge-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; flex-shrink:0; animation: blink 2s ease-in-out infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.4} }
 
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border-radius: var(--r);
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+    .stat-cell {
+      background: var(--white);
+      padding: 16px;
+      text-align: center;
+    }
+    .stat-n {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-n em { color: var(--accent); font-style: normal; }
+    .stat-l { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
 
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
+    /* ─── SECTIONS ─── */
+    section { padding: 100px 5%; }
 
+    .sec-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .sec-eyebrow::before { content: ''; display: block; width: 20px; height: 1.5px; background: var(--accent); }
 
-</style>
+    .sec-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+    .sec-sub {
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 300;
+      max-width: 560px;
+      line-height: 1.7;
+    }
 
+    /* ─── ABOUT ─── */
+    #about { background: var(--off); }
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: start;
+      margin-top: 4rem;
+      max-width: 780px;
+    }
 
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Aniket Solanki</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+    .about-body p {
+      font-size: 0.96rem;
+      color: var(--ink2);
+      line-height: 1.9;
+      font-weight: 300;
+      margin-bottom: 1.2rem;
+    }
+    .about-body strong { color: var(--ink); font-weight: 600; }
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#Education-section" class="nav-link"><span>Education</span></a></li>
-			  <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-			  <li class="nav-item"><a href="#research-project" class="nav-link"><span>Research Project</span></a></li>
-        <li class="nav-item"><a href="#certification-section" class="nav-link"><span>Certifications</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-  <div class="home-slider owl-carousel">
-    <div class="slider-item">
-      <div class="overlay"></div>
+    .about-table {
+      margin-top: 2rem;
+      display: flex; flex-direction: column;
+      border: 1px solid var(--line);
+      border-radius: var(--r2);
+      overflow: hidden;
+    }
+    .about-row {
+      display: grid; grid-template-columns: 120px 1fr;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.88rem;
+    }
+    .about-row:last-child { border-bottom: none; }
+    .about-row dt { color: var(--muted); font-weight: 400; }
+    .about-row dd { color: var(--ink); font-weight: 400; }
 
-      <div class="container">
-        <!-- changed: align-items-center + justify-content-start -->
-        <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-start">
+    .skills-wrap { display: flex; flex-direction: column; gap: 16px; margin-top: 2.5rem; }
+    .sk { display: flex; flex-direction: column; gap: 7px; }
+    .sk-top { display: flex; justify-content: space-between; font-size: 0.85rem; }
+    .sk-name { color: var(--ink2); font-weight: 400; }
+    .sk-pct { color: var(--accent); font-weight: 600; font-family: var(--font-serif); }
+    .sk-track {
+      height: 4px;
+      background: var(--light);
+      border-radius: 100px;
+      overflow: hidden;
+    }
+    .sk-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 100px;
+      width: 0;
+      transition: width 1.4s cubic-bezier(0.16,1,0.3,1);
+    }
 
-          <!-- changed: removed the empty image column completely -->
+    /* ─── EXPERIENCE ─── */
+    #experience { background: var(--off); }
+    .exp-list { display: flex; flex-direction: column; gap: 24px; margin-top: 3.5rem; }
+    .exp-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r2);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .exp-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .exp-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; bottom: 0;
+      width: 3px;
+      background: var(--accent);
+    }
+    .exp-header {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      gap: 1rem; margin-bottom: 0.5rem; flex-wrap: wrap;
+    }
+    .exp-role {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .exp-period {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--accent);
+      background: var(--accent-l);
+      padding: 4px 12px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+    .exp-company {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+    .exp-company strong { color: var(--ink2); font-weight: 500; }
+    .exp-bullets { display: flex; flex-direction: column; gap: 8px; }
+    .exp-bullet {
+      display: flex; gap: 10px;
+      font-size: 0.88rem;
+      color: var(--ink2);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+    .exp-bullet::before {
+      content: '–';
+      color: var(--accent);
+      font-weight: 600;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .exp-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 1.25rem; }
 
-          <!-- changed: text container is now full width on desktop -->
-          <div class="col-md-10 col-lg-8 d-flex align-items-center ftco-animate">
-            <div class="text">
-              <span class="subheading">Hello!</span>
-              <h1 class="mb-4 mt-3">I'm <span>Aniket Solanki</span></h1>
+    /* ─── EDUCATION ─── */
+    #education { background: var(--white); }
+    .edu-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px; margin-top: 3.5rem;
+    }
+    .edu-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r2);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .edu-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .edu-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--accent);
+    }
+    .edu-year {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .edu-deg {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+    .edu-uni {
+      font-size: 0.88rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
 
-              <span id="typing-animation"></span>
+    /* ─── PROJECTS ─── */
+    #projects { background: var(--off); }
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 24px; margin-top: 3.5rem;
+    }
+    .proj-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r2);
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .proj-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
 
-              <script>
-                const typingAnimationElement = document.getElementById('typing-animation');
-                const typingTexts = ['Power BI Data Analyst  ']; // changed title
+    .proj-thumb {
+      width: 100%; height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+    .proj-thumb-ph {
+      width: 100%; height: 180px;
+      background: var(--light);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
 
-                function playTypingAnimation(text) {
-                  for (let i = 0; i < text.length; i++) {
-                    setTimeout(() => {
-                      typingAnimationElement.textContent += text[i];
-                    }, i * 120);
-                  }
+    .proj-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .proj-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem; }
+    .ptag {
+      font-size: 0.7rem; font-weight: 600;
+      padding: 3px 10px; border-radius: 100px;
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .ptag-blue { background: var(--accent-l); color: var(--accent); }
+    .ptag-green { background: var(--green-l); color: var(--green); }
+    .ptag-amber { background: var(--amber-l); color: var(--amber); }
+    .ptag-gray { background: var(--light); color: var(--muted); }
 
-                  setTimeout(() => {
-                    typingAnimationElement.textContent = '';
-                    playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-                  }, text.length * 120 + 800);
-                }
+    .proj-title {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.35;
+      margin-bottom: 0.6rem;
+    }
+    .proj-desc {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.7;
+      font-weight: 300;
+      flex: 1;
+    }
+    .proj-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 1.2rem;
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+    .proj-link:hover { gap: 10px; }
 
-                playTypingAnimation(typingTexts[0]);
-              </script>
+    /* ─── RESEARCH ─── */
+    #research { background: var(--white); }
+    .research-list { display: flex; flex-direction: column; gap: 0; margin-top: 3rem; }
+    .res-item {
+      display: grid;
+      grid-template-columns: 60px 1fr auto;
+      gap: 1.5rem;
+      align-items: center;
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.15s;
+    }
+    .res-item:first-child { border-top: 1px solid var(--line); }
+    .res-item:hover { background: var(--off); margin: 0 -5%; padding-left: 5%; padding-right: 5%; border-radius: 0; }
+    .res-num {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--line);
+    }
+    .res-title {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .res-desc { font-size: 0.85rem; color: var(--muted); font-weight: 300; }
+    .res-arrow {
+      width: 32px; height: 32px; border-radius: 50%;
+      border: 1.5px solid var(--line);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .res-item:hover .res-arrow { background: var(--ink); border-color: var(--ink); color: #fff; }
 
-              <br><br>
-              <h2>Transforming Data into Visual Stories</h2>
+    /* ─── CERTIFICATIONS ─── */
+    #certifications { background: var(--off); }
+    .certs-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px; margin-top: 3.5rem;
+    }
+    .cert-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r2);
+      padding: 2rem;
+      display: flex; flex-direction: column; gap: 1.25rem;
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .cert-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .cert-logo {
+      width: 48px; height: 48px;
+      border-radius: 10px;
+      background: var(--off);
+      border: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+    }
+    .cert-name {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .cert-by { font-size: 0.82rem; color: var(--muted); }
+    .cert-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.82rem; font-weight: 600;
+      color: var(--accent); text-decoration: none;
+      margin-top: auto;
+    }
 
-              <p>
-                <a href="https://www.linkedin.com/in/aniket-solanki-7618691a6/" class="btn btn-primary py-3 px-4">LinkedIn</a>
-                <a href="https://github.com/Aniketsol" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
-              </p>
-            </div>
-          </div>
+    /* ─── CONTACT ─── */
+    #contact { background: var(--ink); }
+    #contact .sec-eyebrow { color: var(--accent-m); }
+    #contact .sec-eyebrow::before { background: var(--accent-m); }
+    #contact .sec-title { color: #fff; }
+    #contact .sec-sub { color: rgba(255,255,255,0.5); }
 
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      margin-top: 4rem;
+      align-items: start;
+    }
+
+    .contact-items { display: flex; flex-direction: column; gap: 12px; }
+    .ci {
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--r);
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .ci:hover { background: rgba(255,255,255,0.09); }
+    .ci-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .ci-lbl { font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-bottom: 1px; }
+    .ci-val { font-size: 0.9rem; color: rgba(255,255,255,0.85); font-weight: 400; }
+
+    .socials-row { display: flex; gap: 10px; margin-top: 2rem; }
+    .soc {
+      width: 40px; height: 40px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none;
+      font-size: 0.85rem; color: rgba(255,255,255,0.6);
+      font-weight: 600;
+      transition: background 0.2s, color 0.2s;
+    }
+    .soc:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    .contact-form {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--r2);
+      padding: 2.5rem;
+    }
+    .contact-form h3 {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+    .cf-group { margin-bottom: 14px; }
+    .cf-label { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-bottom: 6px; }
+    .cf-input, .cf-ta {
+      width: 100%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 11px 14px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: #fff;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .cf-input::placeholder, .cf-ta::placeholder { color: rgba(255,255,255,0.25); }
+    .cf-input:focus, .cf-ta:focus { border-color: var(--accent); }
+    .cf-ta { resize: vertical; min-height: 100px; }
+    .cf-btn {
+      width: 100%;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 13px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+    .cf-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: #111;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 2rem 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    footer p { font-size: 0.82rem; color: rgba(255,255,255,0.3); }
+    .footer-logo {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+    }
+    .footer-logo em { color: var(--accent); font-style: normal; }
+
+    /* ─── BAR CHART ANIMATION ─── */
+    .bar-ani {
+      height: var(--h);
+      transform-origin: bottom;
+      animation: bar-grow 0.8s cubic-bezier(0.16,1,0.3,1) both;
+    }
+    @keyframes bar-grow {
+      from { transform: scaleY(0); opacity: 0; }
+      to   { transform: scaleY(1); opacity: 1; }
+    }
+
+    /* ─── REVEAL ─── */
+    .reveal { opacity: 1; transform: none; }
+    .reveal-delay-1 { }
+    .reveal-delay-2 { }
+    .reveal-delay-3 { }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 900px) {
+      .about-layout, .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+    }
+    @media (max-width: 640px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-links.open {
+        display: flex; flex-direction: column; gap: 0;
+        position: absolute; top: 60px; left: 0; right: 0;
+        background: #fff; border-bottom: 1px solid var(--line);
+        padding: 1rem 5%;
+      }
+      .nav-links.open a { padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 1rem; color: var(--ink); }
+      .burger { display: flex; }
+      .res-item { grid-template-columns: 40px 1fr auto; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">Aniket <em>Solanki</em></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://drive.google.com/file/d/1rCp14gfSREyEBJOazNJUBJXLUEhlMJBU/view?usp=sharing" target="_blank" class="nav-cta">Download CV</a>
+  <div class="burger" id="burger" onclick="document.getElementById('nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" style="display:flex;align-items:flex-start;justify-content:space-between;gap:4rem;flex-wrap:wrap;padding-top:7rem;padding-bottom:4rem;">
+  <div class="hero-left" style="flex:1;min-width:300px;max-width:600px;">
+    <div class="hero-tag">Power BI Data Analyst · Sydney, AU</div>
+    <h1 class="hero-h1">
+      Aniket<br>
+      <span class="line2">Solanki</span>
+    </h1>
+    <p class="hero-role"><span id="typing"></span></p>
+    <p class="hero-bio">
+      Transforming complex, multi-source data into executive dashboards and clear business insights.
+      Microsoft <strong>PL-300</strong> certified and <strong>AWS Cloud Practitioner</strong> — with deep expertise in Power BI, SQL, DAX, and Python.
+    </p>
+    <div class="hero-btns">
+      <a href="https://www.linkedin.com/in/aniket-solanki-7618691a6/" target="_blank" class="btn-solid">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/Aniketsol" target="_blank" class="btn-outline">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        GitHub
+      </a>
+    </div>
+    <div class="hero-chips">
+      <span class="chip">Power BI</span>
+      <span class="chip">SQL</span>
+      <span class="chip">DAX</span>
+      <span class="chip">Python</span>
+      <span class="chip">Azure</span>
+      <span class="chip">AWS</span>
+      <span class="chip">Tableau</span>
+      <span class="chip">ETL</span>
+      <span class="chip">Excel</span>
+    </div>
+
+    <!-- Stats row -->
+    <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--line);align-items:center;">
+      <div>
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--ink);line-height:1;">10<em style="color:var(--accent);font-style:normal;">+</em></div>
+        <div style="font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:3px;">Projects</div>
+      </div>
+      <div style="width:1px;height:40px;background:var(--line);"></div>
+      <div>
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--ink);line-height:1;">2<em style="color:var(--accent);font-style:normal;">+</em></div>
+        <div style="font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:3px;">Certifications</div>
+      </div>
+      <div style="width:1px;height:40px;background:var(--line);"></div>
+      <div>
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--ink);line-height:1;">15<em style="color:var(--accent);font-style:normal;">+</em></div>
+        <div style="font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:3px;">Skills</div>
+      </div>
+      <div style="margin-left:auto;display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--line);border-radius:100px;padding:8px 18px;font-size:0.78rem;font-weight:500;color:var(--ink2);">
+        <div class="badge-dot"></div>
+        Open to opportunities
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS CARD beside name -->
+  <div class="hero-skills-card reveal" style="
+    flex:0 0 280px;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--r2);
+    padding:1.6rem;
+    box-shadow:var(--shadow-md);
+    margin-top:2rem;
+    position:sticky;
+    top:80px;
+  ">
+    <div style="font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:1.2rem;">Core Skills</div>
+
+    <!-- Skill bars -->
+    <div style="display:flex;flex-direction:column;gap:1rem;">
+
+      <div>
+        <div style="display:flex;justify-content:space-between;font-size:0.82rem;font-weight:500;color:var(--ink2);margin-bottom:5px;">
+          <span>Power BI &amp; DAX</span><span style="color:var(--accent);">95%</span>
+        </div>
+        <div style="height:5px;background:var(--light);border-radius:99px;overflow:hidden;">
+          <div style="width:95%;height:100%;background:var(--accent);border-radius:99px;"></div>
         </div>
       </div>
 
+      <div>
+        <div style="display:flex;justify-content:space-between;font-size:0.82rem;font-weight:500;color:var(--ink2);margin-bottom:5px;">
+          <span>SQL &amp; T-SQL</span><span style="color:var(--accent);">90%</span>
+        </div>
+        <div style="height:5px;background:var(--light);border-radius:99px;overflow:hidden;">
+          <div style="width:90%;height:100%;background:var(--accent);border-radius:99px;"></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex;justify-content:space-between;font-size:0.82rem;font-weight:500;color:var(--ink2);margin-bottom:5px;">
+          <span>Python (Pandas, NumPy)</span><span style="color:var(--accent);">85%</span>
+        </div>
+        <div style="height:5px;background:var(--light);border-radius:99px;overflow:hidden;">
+          <div style="width:85%;height:100%;background:var(--accent);border-radius:99px;"></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex;justify-content:space-between;font-size:0.82rem;font-weight:500;color:var(--ink2);margin-bottom:5px;">
+          <span>Azure (ADF, SQL, Blob)</span><span style="color:#0d47a1;">82%</span>
+        </div>
+        <div style="height:5px;background:var(--light);border-radius:99px;overflow:hidden;">
+          <div style="width:82%;height:100%;background:#0d47a1;border-radius:99px;"></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex;justify-content:space-between;font-size:0.82rem;font-weight:500;color:var(--ink2);margin-bottom:5px;">
+          <span>AWS (S3, Glue, Athena)</span><span style="color:var(--amber);">85%</span>
+        </div>
+        <div style="height:5px;background:var(--light);border-radius:99px;overflow:hidden;">
+          <div style="width:85%;height:100%;background:var(--amber);border-radius:99px;"></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex;justify-content:space-between;font-size:0.82rem;font-weight:500;color:var(--ink2);margin-bottom:5px;">
+          <span>ETL Pipelines</span><span style="color:var(--green);">88%</span>
+        </div>
+        <div style="height:5px;background:var(--light);border-radius:99px;overflow:hidden;">
+          <div style="width:88%;height:100%;background:var(--green);border-radius:99px;"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Cert badges -->
+    <div style="margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:0.6rem;">
+      <div style="display:flex;align-items:center;gap:8px;font-size:0.78rem;color:var(--ink2);">
+        <span style="background:var(--accent-l);color:var(--accent);border-radius:6px;padding:3px 8px;font-weight:600;font-size:0.72rem;">PL-300</span>
+        Microsoft Power BI Certified
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:0.78rem;color:var(--ink2);">
+        <span style="background:var(--amber-l);color:var(--amber);border-radius:6px;padding:3px 8px;font-weight:600;font-size:0.72rem;">AWS</span>
+        Cloud Practitioner Certified
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="reveal">
+    <div class="sec-eyebrow">About</div>
+    <h2 class="sec-title">Who I am</h2>
+  </div>
+  <div class="about-layout">
+    <div class="reveal reveal-delay-1">
+      <div class="about-body">
+        <p>
+          <strong>Data Analyst</strong> with Microsoft <strong>PL-300</strong> &amp; AWS Cloud Practitioner certifications. Proficient in Power BI, DAX, SQL, Python, and cloud-based ETL pipelines, with a proven ability to automate workflows, build scalable data models, and deliver actionable insights that support business decision-making.
+        </p>
+        <p>
+          Experienced in equity trading analytics, inventory operations, and building executive-ready dashboards across both corporate and freelance settings. Comfortable working across the full data stack — from raw ingestion to polished stakeholder reporting.
+        </p>
+      </div>
+      <dl class="about-table">
+        <div class="about-row"><dt>Profile</dt><dd>Power BI Data Analyst</dd></div>
+        <div class="about-row"><dt>Education</dt><dd>Master of Business Analytics, UTS</dd></div>
+        <div class="about-row"><dt>Location</dt><dd>Parramatta, Sydney AU</dd></div>
+        <div class="about-row"><dt>Language</dt><dd>English (Fluent)</dd></div>
+        <div class="about-row"><dt>BI Tools</dt><dd>Power BI, DAX, Power Query, Tableau</dd></div>
+        <div class="about-row"><dt>Data Eng.</dt><dd>SQL, Python (Pandas, NumPy), ETL Pipelines</dd></div>
+        <div class="about-row"><dt>Platforms</dt><dd>Azure (ADF, Blob, SQL), AWS (S3, Glue, Athena), Git, JIRA, Google Analytics</dd></div>
+        <div class="about-row"><dt>Interests</dt><dd>Travel · Photography · Cricket · Football</dd></div>
+      </dl>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="reveal">
+    <div class="sec-eyebrow">Education</div>
+    <h2 class="sec-title">Academic background</h2>
+  </div>
+  <div class="edu-grid" style="margin-top:3.5rem">
+    <div class="edu-card reveal">
+      <div class="edu-year">Feb 2024 — Dec 2025</div>
+      <div class="edu-deg">Master of Business Analytics</div>
+      <div class="edu-uni">University of Technology Sydney</div>
+    </div>
+    <div class="edu-card reveal reveal-delay-1">
+      <div class="edu-year">Aug 2019 — Jul 2023</div>
+      <div class="edu-deg">Bachelor of Computer Engineering</div>
+      <div class="edu-uni">Mumbai University</div>
+    </div>
+    <div class="edu-card reveal reveal-delay-2">
+      <div class="edu-year">2017</div>
+      <div class="edu-deg">Higher Secondary Certificate (HSC)</div>
+      <div class="edu-uni">Maharashtra State Board</div>
     </div>
   </div>
 </section>
 
-
-
-
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Aniket Solanki</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Power BI Data Analyst</span></p>
-										<p><span class="title-s">Location: </span> <span>Parramatta, NSW , Australia </span></p>
-									  </div>
-									</div>
-								  </div>
-							   <div class="skill-mf">
-									<p class="title-s">Skills</p>
-
-									<span>Power BI & Tableau : </span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-
-									<span>SQL & Data Analysis : </span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-
-									<span>Cloud Platforms : </span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-
-									<span>Data Cleaning & Preprocessing : </span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-
-									<span>Advanced Excel & Microsoft Office : </span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-
-									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-
-									<span>Python Programming</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p><li class="d-flex"><span><p><li class="d-flex"><span>
-<p>
-Power BI Data Analyst with hands-on experience delivering executive dashboards, KPI reporting, and automated ETL pipelines.
-Strong expertise in Power BI, SQL, DAX, and Python, with a proven ability to transform multi-source data into business-ready insights.
-</p>
-
-<p>
-Microsoft PL-300 and AWS Certified Cloud Practitioner, with experience working across cloud-based analytics solutions using AWS services such as S3, Glue, and Athena.
-Skilled in designing interactive dashboards and analytics solutions that support data-driven decision-making.
-</p>
-
-<p>
-Experienced in analysing trends, evaluating performance, and building reporting solutions that translate complex data into clear, actionable insights for business stakeholders.
-</p>
-
-
-								</span></li></p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-
-  <li class="d-flex">
-    <span>Profile:</span>
-    <span>Power BI Data Analyst</span>
-  </li>
-
-  <li class="d-flex">
-    <span>Education:</span>
-    <span>Master of Business Analytics</span>
-  </li>
-
-  <li class="d-flex">
-    <span>Language:</span>
-    <span>English (Fluent)</span>
-  </li>
-
-  <li class="d-flex">
-    <span>BI & Analytics:</span>
-    <span>
-      Power BI, Tableau – Dashboarding & visualisation<br>
-      SQL – Data extraction, transformation, analytical querying
-    </span>
-  </li>
-
-  <li class="d-flex">
-    <span>Technical Skills:</span>
-    <span>
-      Python, MySQL, Git, Advanced Excel (Pivot Tables, Lookups)<br>
-      AWS Cloud Analytics, Google Analytics
-    </span>
-  </li>
-
-  <li class="d-flex">
-    <span>Interests:</span>
-    <span>Travel, Photography (urban & nature), Cricket, Football</span>
-  </li>
-
-</ul>
-
-							</div>
-						</div>
-
-
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="10">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/aniket-solanki-7618691a6/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
-
-
-<!-- Element to contain animated typing -->
-
-<section class="ftco-section ftco-no-pb" id="Education-section">
-  <div class="container">
-    <div class="row justify-content-center pb-5">
-      <div class="col-md-10 heading-section text-center ftco-animate">
-        <h1 class="big big-2">Education</h1>
-        <h2 class="mb-4">Education</h2>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-6">
-        <div class="resume-wrap ftco-animate">
-          <span class="date">Feb 2024 – Dec 2025</span>
-          <h2>Master of Business Analytics</h2>
-          <span class="position">University of Technology Sydney</span>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="resume-wrap ftco-animate">
-          <span class="date">Aug 2019 – Jul 2023</span>
-          <h2>Bachelor of Computer Engineering</h2>
-          <span class="position">Mumbai University</span>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="resume-wrap ftco-animate">
-          <span class="date">2017</span>
-          <h2>Higher Secondary Certificate (HSC)</h2>
-          <span class="position">Maharashtra State Board</span>
-        </div>
-      </div>
-    </div>
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="reveal">
+    <div class="sec-eyebrow">Experience</div>
+    <h2 class="sec-title">Where I've worked</h2>
   </div>
-</section>
+  <div class="exp-list">
 
-
-
-
-<!-- project section -->
-
-<section class="ftco-section" id="project-section">
-  <div class="container">
-    <div class="row justify-content-center mb-5 pb-5">
-      <div class="col-md-7 heading-section text-center ftco-animate">
-        <h1 class="big big-2">Projects</h1>
-        <h2 class="mb-4">Projects</h2>
-        <p>Below are the projects on SQL, Python & Power BI.</p>
+    <div class="exp-card reveal">
+      <div class="exp-header">
+        <div class="exp-role">Inventory &amp; Operations Assistant <span style="font-weight:400;color:var(--muted);font-size:0.9rem;">(Part-time)</span></div>
+        <div class="exp-period">Sep 2024 – Present</div>
+      </div>
+      <div class="exp-company"><strong>The Fruit Box Group</strong> · Sydney, AU</div>
+      <div class="exp-bullets">
+        <div class="exp-bullet">Utilise Netsuite ERP to manage real-time inventory tracking, stock updates, and order fulfilment.</div>
+        <div class="exp-bullet">Conduct regular stock-takes and audits to ensure 100% accuracy between physical inventory and system records.</div>
+        <div class="exp-bullet">Maintain strict hygiene, quality, and compliance standards while meeting daily productivity targets.</div>
+      </div>
+      <div class="exp-tags">
+        <span class="ptag ptag-gray">Netsuite ERP</span>
+        <span class="ptag ptag-gray">Inventory Management</span>
+        <span class="ptag ptag-gray">Operations</span>
       </div>
     </div>
 
-    <!-- First Row -->
-    <div class="row d-flex">
-      <!-- 1. Enterprise Data Warehouse -->
-      <div class="col-md-4 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://github.com/Aniketsol/Enterprise-Data-Warehouse-SQL-ETL-Analytics-Pipeline" class="block-20 zoom-effect" style="background-image: url('images/Architecture.png');"></a>
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">
-              <a href="https://github.com/Aniketsol/Enterprise-Data-Warehouse-SQL-ETL-Analytics-Pipeline" target="_blank">Enterprise Data Warehouse SQL ETL & Analytics Pipeline</a>
-            </h3>
-            <p>Designed and built an enterprise grade data warehouse with SQL based ETL flows and analytics ready schema to support robust business intelligence reporting.</p>
-            <p>
-              <a href="https://github.com/Aniketsol/Enterprise-Data-Warehouse-SQL-ETL-Analytics-Pipeline" target="_blank" class="btn btn-outline-primary btn-sm me-2">View on GitHub</a>
-            </p>
-          </div>
-        </div>
+    <div class="exp-card reveal reveal-delay-1">
+      <div class="exp-header">
+        <div class="exp-role">Reporting &amp; Data Analyst Intern</div>
+        <div class="exp-period">Jul 2023 – Feb 2024</div>
       </div>
-
-      <!-- 2. AWS End-to-End Data Analytics -->
-      <div class="col-md-4 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://www.youtube.com/watch?v=JFt5xVfZi3Q" class="block-20 zoom-effect" style="background-image: url('images/proj_aws.png');"></a>
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">
-              <a href="https://youtu.be/JFt5xVfZi3Q" target="_blank">AWS End-to-End Data Analytics Project</a>
-            </h3>
-            <p>
-              • Analysed multi-year retail sales and built KPI dashboards for actionable insights.<br>
-              • Created serverless ETL using S3, AWS Glue, Athena, and Power BI, achieving 95–98% data accuracy.<br>
-              • Improved ETL efficiency and processing speed through schema automation and Python preprocessing.<br>
-              <strong>Tech:</strong> S3, Glue, Athena, Python, Power BI
-            </p>
-            <p>
-              <a href="https://youtu.be/JFt5xVfZi3Q" target="_blank" class="btn btn-outline-primary btn-sm me-2">Click here for video</a>
-            </p>
-          </div>
-        </div>
+      <div class="exp-company"><strong>Kalash Shares &amp; Securities</strong> · India</div>
+      <div class="exp-bullets">
+        <div class="exp-bullet">Performed equity trading data cleaning and preprocessing using Python (Pandas, NumPy), eliminating manual Excel preparation for weekly reports.</div>
+        <div class="exp-bullet">Extracted and aggregated client transaction records via SQL to support monthly performance reviews.</div>
+        <div class="exp-bullet">Developed 2–3 interactive Power BI dashboards using DAX and Power Query to visualise portfolio performance and trading activity.</div>
+        <div class="exp-bullet">Integrated SQL and Excel data sources using Power Query to ensure consistent reporting across client accounts.</div>
       </div>
-
-      <!-- 3. Automated Payments ETL -->
-      <div class="col-md-4 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://github.com/Aniketsol/Automated-Payments-ETL" class="block-20 zoom-effect" style="background-image: url('images/proj_etl.jpeg');"></a>
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">
-              <a href="https://github.com/Aniketsol/Automated-Payments-ETL" target="_blank">Automated Payments Data Pipeline ETL & Analytics Ready</a>
-            </h3>
-            <p>
-              • Built a fully automated payments ETL pipeline simulating real banking and fintech transactions.<br>
-              • Incremental Python ETL continuously adds new payment records without duplicates.<br>
-              • Scalable MySQL schema for customers, accounts, payments, and transactions.<br>
-              • Fully automated pipeline with Task Scheduler; analytics-ready SQL views refresh automatically.<br>
-            </p>
-            <p>
-              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7396063660542013440/" target="_blank">View on LinkedIn</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Second Row -->
-    <div class="row d-flex">
-      <!-- 4. Pizza Store -->
-      <div class="col-md-4 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://github.com/Aniketsol/pizza_company-data-analysis" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');"></a>
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">
-              <a href="https://github.com/Aniketsol/pizza_company-data-analysis">Pizza Store Data Analysis and Visualisation using SQL and Power BI</a>
-            </h3>
-            <p>Analyzed Pizza store data using advanced SQL queries to identify gaps and increase business growth.</p>
-            <p>
-              <a href="https://www.youtube.com/watch?v=MPCfWtc-vGk" target="_blank" class="btn btn-outline-primary btn-sm me-2">Click here for video</a>
-            </p>
-          </div>
-        </div>
-      </div>
-
-
-
-      <!-- 7. eCommerce Website Analytics -->
-      <div class="col-md-4 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://github.com/Aniketsol/ecommerce-web-analytics" class="block-20 zoom-effect" style="background-image: url('images/proj_6.jpg');"></a>
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">
-              <a href="https://github.com/Aniketsol/ecommerce-web-analytics">eCommerce Website Analytics</a>
-            </h3>
-            <p>Analyzed a Teddy eCommerce website using SQL queries to evaluate traffic sources, device usage, sales per advertisement, and more.</p>
-            <p>
-              <a href="https://github.com/Aniketsol/ecommerce-web-analytics" target="_blank" class="btn btn-outline-primary btn-sm me-2">View on GitHub</a>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      
-
-      <!-- 6. Power BI HR Dashboard -->
-      <div class="col-md-4 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://github.com/Aniketsol/Hr-Analytics-Dashboard-" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');"></a>
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">
-              <a href="https://github.com/Aniketsol/Hr-Analytics-Dashboard-">Power BI HR Dashboard</a>
-            </h3>
-            <p>This dashboard provides insights regarding company attrition rate.</p>
-            <p>
-              <a href="https://github.com/Aniketsol/Hr-Analytics-Dashboard-" target="_blank" class="btn btn-outline-primary btn-sm me-2">View on GitHub</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Third Row -->
-    <div class="row d-flex">
-      <!-- 5. Power BI Sales Dashboard -->
-      <div class="col-md-4 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://github.com/Aniketsol/Data-Visualization-for-company" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');"></a>
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">
-              <a href="https://github.com/Aniketsol/Data-Visualization-for-company">Power BI Sales Dashboard Project</a>
-            </h3>
-            <p>Designed a Power BI dashboard for a store to track and analyze online sales data.</p>
-            <p>
-              <a href="https://github.com/Aniketsol/Data-Visualization-for-company" target="_blank" class="btn btn-outline-primary btn-sm me-2">View on GitHub</a>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 8. Face Mask Detection -->
-      <div class="col-md-4 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://github.com/Aniketsol/Face-Mask-Detection" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');"></a>
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">
-              <a href="https://github.com/Aniketsol/Face-Mask-Detection">Face Mask Detection using Python</a>
-            </h3>
-            <p>Performed exploratory data training using Python to improve mask detection accuracy.</p>
-            <p>
-              <a href="https://github.com/Aniketsol/Face-Mask-Detection" target="_blank" class="btn btn-outline-primary btn-sm me-2">View on GitHub</a>
-            </p>
-          </div>
-        </div>
+      <div class="exp-tags">
+        <span class="ptag ptag-blue">Power BI</span>
+        <span class="ptag ptag-blue">DAX</span>
+        <span class="ptag ptag-green">Python</span>
+        <span class="ptag ptag-blue">SQL</span>
+        <span class="ptag ptag-gray">Power Query</span>
+        <span class="ptag ptag-gray">Excel</span>
       </div>
     </div>
 
   </div>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="reveal">
+    <div class="sec-eyebrow">Projects</div>
+    <h2 class="sec-title">Work I'm proud of</h2>
+    <p class="sec-sub">Data engineering, analytics dashboards, and end-to-end pipelines built with SQL, Python, Power BI, AWS, and Azure.</p>
+  </div>
+  <div class="proj-grid">
 
-
-
-
-
-
-
-
-
-
-
-	
-	<section class="ftco-section" id="research-project">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-		  <h1 class="big big-2">Research Project</h1>
-          <h2 class="mb-4">Research Project</h2>
-          </div>
+    <div class="proj-card reveal">
+      <img src="images/proj_adf.png" alt="ADF Pipeline" class="proj-thumb"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">ADF Pipeline</div>
+      <div class="proj-body">
+        <div class="proj-tags">
+          <span class="ptag ptag-blue">Azure</span>
+          <span class="ptag ptag-gray">ADF</span>
+          <span class="ptag ptag-green">ETL</span>
+          <span class="ptag ptag-amber">SQL</span>
         </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="coles vs wool.html" class="block-20 zoom-effect" style="background-image: url(images/ColesWoolies.png);">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="coles vs wool.html">COLES vs WOOLWORTHS
-Financial Performance Analysis </a></h3>
-                <p><a href="coles vs wool.html">Click here for more details and report</a></p>
-              </div>
-            </div>
-          </div>
-
-	  <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="aus trade.html" class="block-20 zoom-effect" style="background-image: url(images/visual1.jpg);">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="aus trade.html">Visual Analytics: Australian International Trade (1988–2023) </a></h3>
-                <p><a href="aus trade.html">Click here for more details and report</a></p>
-              </div>
-            </div>
-          </div>
-
-
-
-
-		  <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="bunnings.html" class="block-20 zoom-effect" style="background-image: url(images/bunnings.png);">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="bunnings.html">Bunnings Warehouse Supply Chain Network Design </a></h3>
-                <p><a href="bunnings.html">Click here for more details and report</a></p>
-              </div>
-            </div>
-          </div>
-
-		  
-
-
-		   <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="Aus health insurance.html" class="block-20 zoom-effect" style="background-image: url(images/phi.jpg);">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="Aus health insurance.html">Private Health Insurance (PHI) Market Analysis & Policy Evaluation </a></h3>
-                <p><a href="Aus health insurance.html">Click here for more details and report</a></p>
-              </div>
-
-            </div>
-          </div>
-
-
-	</section>
-
-
-
-
-
-
-  <section class="ftco-section" id="certification-section">
-  <div class="container">
-    <div class="row justify-content-center mb-5 pb-5">
-      <div class="col-md-7 heading-section text-center ftco-animate">
-        <h1 class="big big-2">Certifications</h1>
-        <h2 class="mb-4">Certifications</h2>
+        <div class="proj-title">Azure Data Factory ETL Pipeline &amp; Power BI Reporting</div>
+        <p class="proj-desc">End-to-end ADF pipeline ingesting live retail data from REST API → Azure Blob Storage → Data Flow transformations (null filtering, text cleaning, nested JSON flattening) → Azure SQL Database. Automated with daily triggers.</p>
+        <a href="https://youtu.be/k9bh0fMdX_Y" target="_blank" class="proj-link">Watch Demo →</a>
       </div>
     </div>
 
-    <div class="row d-flex">
-
-      <!-- AWS Cloud Practitioner -->
-      <div class="col-md-6 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://www.credly.com/badges/c7937bd7-120a-423d-ae0c-7caeed6b6f50/public_url" target="_blank" class="block-20 zoom-effect" 
-             style="background-image: url('images/Aws_certi.jpeg');">
-          </a>
-
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">AWS Certified Cloud Practitioner</h3>
-            <p>Issued by Amazon Web Services</p>
-
-            <p>
-              <a href="https://www.credly.com/badges/c7937bd7-120a-423d-ae0c-7caeed6b6f50/public_url" target="_blank" 
-                 class="btn btn-outline-primary btn-sm">Click here to view</a>
-            </p>
-          </div>
+    <div class="proj-card reveal">
+      <img src="images/Architecture.png" alt="Enterprise DW" class="proj-thumb"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">Enterprise DW</div>
+      <div class="proj-body">
+        <div class="proj-tags">
+          <span class="ptag ptag-blue">SQL</span>
+          <span class="ptag ptag-gray">ETL</span>
+          <span class="ptag ptag-gray">Analytics</span>
         </div>
+        <div class="proj-title">SQL Data Warehouse &amp; ETL Pipeline</div>
+        <p class="proj-desc">Full Bronze–Silver–Gold SQL data warehouse pipeline with star schema modelling. T-SQL data cleaning, joins, aggregations, and NULL handling for analytics-ready datasets.</p>
+        <a href="https://github.com/Aniketsol/Enterprise-Data-Warehouse-SQL-ETL-Analytics-Pipeline" target="_blank" class="proj-link">
+          View on GitHub →
+        </a>
       </div>
+    </div>
 
-      <!-- PL-300 Power BI -->
-      <div class="col-md-6 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://learn.microsoft.com/api/credentials/share/en-us/AniketVipulSolanki-0194/1A8999F9A024175C?sharingId=41C4D83AD84F67F6" target="_blank" class="block-20 zoom-effect" 
-             style="background-image: url('images/certificate.png');">
-          </a>
-
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">PL-300: Power BI Data Analyst</h3>
-            <p>Issued by Microsoft</p>
-
-            <p>
-              <a href="https://learn.microsoft.com/api/credentials/share/en-us/AniketVipulSolanki-0194/1A8999F9A024175C?sharingId=41C4D83AD84F67F6" target="_blank" 
-                 class="btn btn-outline-primary btn-sm">Click here to view</a>
-            </p>
-          </div>
+    <div class="proj-card reveal reveal-delay-1">
+      <img src="images/proj_aws.png" alt="AWS Analytics" class="proj-thumb"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">AWS Analytics</div>
+      <div class="proj-body">
+        <div class="proj-tags">
+          <span class="ptag ptag-amber">AWS</span>
+          <span class="ptag ptag-blue">Power BI</span>
+          <span class="ptag ptag-green">Python</span>
         </div>
+        <div class="proj-title">AWS Analytics Pipeline &amp; Power BI Reporting</div>
+        <p class="proj-desc">Serverless pipeline using S3, AWS Glue &amp; Athena delivering Power BI dashboards with 98% validated data accuracy. Automated schema detection with Python, improving ETL efficiency by 25%.</p>
+        <a href="https://youtu.be/JFt5xVfZi3Q" target="_blank" class="proj-link">Watch Demo →</a>
       </div>
+    </div>
 
+    <div class="proj-card reveal reveal-delay-2">
+      <img src="images/proj_etl.jpeg" alt="Payments ETL" class="proj-thumb"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">Payments ETL</div>
+      <div class="proj-body">
+        <div class="proj-tags">
+          <span class="ptag ptag-green">Python</span>
+          <span class="ptag ptag-blue">MySQL</span>
+          <span class="ptag ptag-gray">Automation</span>
+        </div>
+        <div class="proj-title">Enterprise Payments ETL &amp; Analytics Platform</div>
+        <p class="proj-desc">Incremental Python ETL pipelines with scheduled refreshes and scalable MySQL schema. DAX measures for YoY growth, margin analysis, and KPI comparisons.</p>
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7396063660542013440/" target="_blank" class="proj-link">View on LinkedIn →</a>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <img src="images/proj_1.jpg" alt="Pizza Analytics" class="proj-thumb"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">Pizza Analytics</div>
+      <div class="proj-body">
+        <div class="proj-tags">
+          <span class="ptag ptag-blue">Power BI</span>
+          <span class="ptag ptag-blue">SQL</span>
+        </div>
+        <div class="proj-title">Pizza Store Data Analysis &amp; Visualisation</div>
+        <p class="proj-desc">Advanced SQL queries on pizza store data to identify growth gaps, paired with an interactive Power BI dashboard.</p>
+        <a href="https://www.youtube.com/watch?v=MPCfWtc-vGk" target="_blank" class="proj-link">Watch Demo →</a>
+      </div>
+    </div>
+
+    <div class="proj-card reveal reveal-delay-1">
+      <img src="images/proj_6.jpg" alt="eCommerce" class="proj-thumb"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">eCommerce Analytics</div>
+      <div class="proj-body">
+        <div class="proj-tags">
+          <span class="ptag ptag-blue">SQL</span>
+          <span class="ptag ptag-gray">Web Analytics</span>
+        </div>
+        <div class="proj-title">eCommerce Website Analytics</div>
+        <p class="proj-desc">SQL-driven analysis of traffic sources, device usage, ad conversions, and revenue attribution for a Teddy eCommerce store.</p>
+        <a href="https://github.com/Aniketsol/ecommerce-web-analytics" target="_blank" class="proj-link">View on GitHub →</a>
+      </div>
+    </div>
+
+    <div class="proj-card reveal reveal-delay-2">
+      <img src="images/proj_4.jpg" alt="HR Dashboard" class="proj-thumb"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">HR Dashboard</div>
+      <div class="proj-body">
+        <div class="proj-tags">
+          <span class="ptag ptag-blue">Power BI</span>
+          <span class="ptag ptag-gray">HR Analytics</span>
+        </div>
+        <div class="proj-title">Power BI HR Analytics Dashboard</div>
+        <p class="proj-desc">Interactive HR dashboard with deep insights into employee attrition, department trends, and workforce performance metrics.</p>
+        <a href="https://github.com/Aniketsol/Hr-Analytics-Dashboard-" target="_blank" class="proj-link">View on GitHub →</a>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <img src="images/proj_3.jpg" alt="Sales Dashboard" class="proj-thumb"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">Sales Dashboard</div>
+      <div class="proj-body">
+        <div class="proj-tags">
+          <span class="ptag ptag-blue">Power BI</span>
+          <span class="ptag ptag-gray">Sales</span>
+        </div>
+        <div class="proj-title">Power BI Sales Dashboard Project</div>
+        <p class="proj-desc">Retail store dashboard to track and analyze online sales data with drill-through capabilities and dynamic filters.</p>
+        <a href="https://github.com/Aniketsol/Data-Visualization-for-company" target="_blank" class="proj-link">View on GitHub →</a>
+      </div>
+    </div>
+
+    <div class="proj-card reveal reveal-delay-1">
+      <img src="images/proj_2.jpg" alt="Face Mask Detection" class="proj-thumb"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">Face Mask Detection</div>
+      <div class="proj-body">
+        <div class="proj-tags">
+          <span class="ptag ptag-green">Python</span>
+          <span class="ptag ptag-gray">ML</span>
+          <span class="ptag ptag-gray">Computer Vision</span>
+        </div>
+        <div class="proj-title">Face Mask Detection using Python</div>
+        <p class="proj-desc">EDA and model training using Python to improve real-time face mask detection accuracy via computer vision.</p>
+        <a href="https://github.com/Aniketsol/Face-Mask-Detection" target="_blank" class="proj-link">View on GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="reveal">
+    <div class="sec-eyebrow">Research</div>
+    <h2 class="sec-title">Research projects</h2>
+    <p class="sec-sub">Academic research combining data analytics, visual storytelling, and business strategy.</p>
+  </div>
+  <div class="research-list">
+    <a href="coles vs wool.html" class="res-item reveal">
+      <div class="res-num">01</div>
+      <div>
+        <div class="res-title">COLES vs WOOLWORTHS — Financial Performance Analysis</div>
+        <div class="res-desc">Comparative financial analysis of Australia's two largest supermarket chains — revenue trends, margins, and strategic positioning.</div>
+      </div>
+      <div class="res-arrow">→</div>
+    </a>
+    <a href="aus trade.html" class="res-item reveal reveal-delay-1">
+      <div class="res-num">02</div>
+      <div>
+        <div class="res-title">Visual Analytics: Australian International Trade (1988–2023)</div>
+        <div class="res-desc">35-year longitudinal analysis of Australia's trade flows, partners, and commodity shifts using Tableau and Python.</div>
+      </div>
+      <div class="res-arrow">→</div>
+    </a>
+    <a href="bunnings.html" class="res-item reveal reveal-delay-2">
+      <div class="res-num">03</div>
+      <div>
+        <div class="res-title">Bunnings Warehouse Supply Chain Network Design</div>
+        <div class="res-desc">Optimisation model for Bunnings' distribution network, balancing cost efficiency, delivery speed, and supplier relationships.</div>
+      </div>
+      <div class="res-arrow">→</div>
+    </a>
+    <a href="Aus health insurance.html" class="res-item reveal">
+      <div class="res-num">04</div>
+      <div>
+        <div class="res-title">Private Health Insurance Market Analysis &amp; Policy Evaluation</div>
+        <div class="res-desc">Australia's PHI market — enrolment trends, affordability pressures, government rebate impacts, and policy effectiveness.</div>
+      </div>
+      <div class="res-arrow">→</div>
+    </a>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="reveal">
+    <div class="sec-eyebrow">Certifications</div>
+    <h2 class="sec-title">Credentials</h2>
+  </div>
+  <div class="certs-grid">
+    <div class="cert-card reveal">
+      <div class="cert-logo">☁️</div>
+      <div>
+        <div class="cert-name">AWS Certified Cloud Practitioner</div>
+        <div class="cert-by">Amazon Web Services</div>
+      </div>
+      <a href="https://www.credly.com/badges/c7937bd7-120a-423d-ae0c-7caeed6b6f50/public_url" target="_blank" class="cert-link">View credential →</a>
+    </div>
+    <div class="cert-card reveal reveal-delay-1">
+      <div class="cert-logo">📊</div>
+      <div>
+        <div class="cert-name">PL-300: Microsoft Power BI Data Analyst</div>
+        <div class="cert-by">Microsoft</div>
+      </div>
+      <a href="https://learn.microsoft.com/api/credentials/share/en-us/AniketVipulSolanki-0194/1A8999F9A024175C?sharingId=41C4D83AD84F67F6" target="_blank" class="cert-link">View credential →</a>
     </div>
   </div>
 </section>
 
-
-
-
-
-
-
-
-
-
-
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="2">0</strong>
-                <span>Certificates</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="10">0</strong>
-                <span>Projects</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="15">0</strong>
-                <span>Skills</span>
-              </div>
-            </div>
-          </div>
-          
+<!-- CONTACT -->
+<section id="contact">
+  <div class="reveal">
+    <div class="sec-eyebrow">Contact</div>
+    <h2 class="sec-title">Let's connect</h2>
+    <p class="sec-sub">Open to new opportunities, collaborations, and data conversations.</p>
+  </div>
+  <div class="contact-layout">
+    <div class="reveal reveal-delay-1">
+      <div class="contact-items">
+        <a href="tel:+61402913874" class="ci">
+          <div class="ci-icon">📞</div>
+          <div><div class="ci-lbl">Phone</div><div class="ci-val">+61 402 913 874</div></div>
+        </a>
+        <a href="/cdn-cgi/l/email-protection#8beae5e2e0eefff8e4e7b9bfbbbacbece6eae2e7a5e8e4e6" class="ci">
+          <div class="ci-icon">✉️</div>
+          <div><div class="ci-lbl">Email</div><div class="ci-val"><span class="__cf_email__" data-cfemail="51303f383a3425223e3d6365616011363c30383d7f323e3c">[email&#160;protected]</span></div></div>
+        </a>
+        <div class="ci" style="cursor:default">
+          <div class="ci-icon">📍</div>
+          <div><div class="ci-lbl">Location</div><div class="ci-val">Parramatta, Sydney, Australia</div></div>
         </div>
+        <a href="https://drive.google.com/file/d/1rCp14gfSREyEBJOazNJUBJXLUEhlMJBU/view?usp=sharing" target="_blank" class="ci">
+          <div class="ci-icon">📄</div>
+          <div><div class="ci-lbl">Resume</div><div class="ci-val">Download PDF</div></div>
+        </a>
       </div>
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems. </h4>
-						<br>
-						<p><a href="https://github.com/Aniketsol" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
-					</div>
-				</div>
-			<!-- </div> -->
-		</div>
-	</section>
+      <div class="socials-row">
+        <a href="https://www.linkedin.com/in/aniket-solanki-7618691a6/" target="_blank" class="soc" title="LinkedIn">in</a>
+        <a href="https://github.com/Aniketsol" target="_blank" class="soc" title="GitHub">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        </a>
+        <a href="http://www.youtube.com/@aniketsolanki7999" target="_blank" class="soc" title="YouTube">▶</a>
+        <a href="https://www.instagram.com/aniketsolanki24/" target="_blank" class="soc" title="Instagram">◎</a>
+        <a href="https://www.facebook.com/aniket.solanki.12979/" target="_blank" class="soc" title="Facebook">f</a>
+      </div>
+    </div>
 
+    <div class="contact-form reveal reveal-delay-2">
+      <h3>Send a message</h3>
+      <div class="cf-group">
+        <label class="cf-label">Your name</label>
+        <input class="cf-input" type="text" placeholder="Full name">
+      </div>
+      <div class="cf-group">
+        <label class="cf-label">Email address</label>
+        <input class="cf-input" type="email" placeholder="you@company.com">
+      </div>
+      <div class="cf-group">
+        <label class="cf-label">Message</label>
+        <textarea class="cf-ta" placeholder="What would you like to discuss?"></textarea>
+      </div>
+      <button class="cf-btn" onclick="this.textContent='Sent ✓';this.style.background='#15803d';setTimeout(()=>{this.textContent='Send message';this.style.background=''},2800)">Send message</button>
+    </div>
+  </div>
+</section>
 
+<!-- FOOTER -->
+<footer>
+  <a href="#hero" class="footer-logo">Aniket <em>Solanki</em></a>
+  <p>© 2025 Aniket Solanki · Power BI Data Analyst · Sydney, AU</p>
+</footer>
 
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
-          </div>
-        </div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Nav scroll shadow
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('up', scrollY > 30));
 
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>Parramatta,Sydney,Australia</p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://0402913874">+61 402913874</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:aniketsol2404@gmail.com">aniketsol2401@gmail.com</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="https://drive.google.com/file/d/1rCp14gfSREyEBJOazNJUBJXLUEhlMJBU/view?usp=sharing">resume link</a></p>
-	          </div>
-          </div>
+  // Typing animation
+  const el = document.getElementById('typing');
+  const phrases = ['Power BI Data Analyst', 'SQL & ETL Engineer', 'AWS Cloud Analytics', 'Data Storyteller'];
+  let pi = 0, ci = 0, del = false;
+  function type() {
+    const p = phrases[pi];
+    if (!del) { el.textContent = p.slice(0, ++ci); if (ci === p.length) { del = true; return setTimeout(type, 2200); } }
+    else { el.textContent = p.slice(0, --ci); if (!ci) { del = false; pi = (pi+1) % phrases.length; } }
+    setTimeout(type, del ? 42 : 85);
+  }
+  type();
 
-		  <div class="container">
-			<br>
-			<br>
-			
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="http://www.youtube.com/@aniketsolanki7999"><span class="icon-youtube"></span></a></li>
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/aniket-solanki-7618691a6/"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href="https://www.facebook.com/aniket.solanki.12979/"><span class="icon-facebook"></span></a></li>
-				      <li class="ftco-animate"><a href="https://www.instagram.com/aniketsolanki24/"><span class="icon-instagram"></span></a></li>
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>
+  // Scroll reveal
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach((e,i) => {
+      if (e.isIntersecting) {
+        const d = +e.target.style.getPropertyValue('--delay') || 0;
+        setTimeout(() => e.target.classList.add('in'), d);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-
- 
-	
-    <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-		  </div>
-		</div>
-	  </footer>
-
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
-  </body>
-</html>
+  // Skill bars on scroll
+  const skillObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.sk-fill').forEach(b => {
+          setTimeout(() => b.sty
