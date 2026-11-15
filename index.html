@@ -4,12 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="e7zjTtJoW6eJuRWFhFZw_8jzkPeNZyInluhPF1s19Y8" />
-  <title>Aniket Solanki | Data Analyst</title>
-  <meta name="description" content="Aniket Solanki — BI-focused Data Analyst based in Sydney. MBAn graduate from UTS, Microsoft PL-300 and AWS certified. Specialising in Power BI, SQL, Azure ETL pipelines and supply chain analytics. Full working rights in Australia.">
+  <title>Aniket Solanki | Data Analyst · Power BI, SQL &amp; Microsoft Fabric · Sydney</title>
+  <meta name="description" content="Aniket Solanki, Data Analyst and BI professional in Sydney with a Master of Business Analytics from UTS. Skilled in Power BI, SQL, Python, Microsoft Fabric and Azure data pipelines. Full Australian work rights.">
   <meta name="keywords" content="Data Analyst Sydney, Power BI, DAX, SQL, Azure, ETL, Business Intelligence, PL-300, AWS, UTS">
   <meta property="og:title" content="Aniket Solanki | Data Analyst">
-  <meta property="og:description" content="BI-focused Data Analyst in Sydney. PL-300 and AWS certified. Power BI, SQL, Azure ETL pipelines. Full working rights in Australia.">
+  <meta property="og:description" content="Data Analyst in Sydney with skills in Power BI, SQL, Python, Microsoft Fabric and Azure data pipelines.">
   <meta property="og:url" content="https://aniketsol.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#f7f6f3">
+  <link rel="canonical" href="https://aniketsol.com">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231d4ed8'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='Georgia' font-weight='700'>A</text></svg>">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Aniket Solanki","jobTitle":"Data Analyst","url":"https://aniketsol.com","address":{"@type":"PostalAddress","addressLocality":"Sydney","addressRegion":"NSW","addressCountry":"AU"},"alumniOf":"University of Technology Sydney","knowsAbout":["Power BI","DAX","SQL","Python","Microsoft Fabric","Azure Data Factory","ETL","Data Modelling"],"sameAs":["https://www.linkedin.com/in/aniket-solanki-7618691a6/","https://github.com/Aniketsol"]}
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -102,7 +110,7 @@
     .sec-sub { font-size: 0.95rem; color: var(--muted); font-weight: 300; max-width: 560px; line-height: 1.7; }
 
     /* ABOUT */
-    #about { background: var(--off); }
+    #about { background: var(--white); }
     .about-layout { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: start; margin-top: 4rem; max-width: 780px; }
     .about-body p { font-size: 0.96rem; color: var(--ink2); line-height: 1.9; font-weight: 300; margin-bottom: 1.2rem; }
     .about-body strong { color: var(--ink); font-weight: 600; }
@@ -144,7 +152,7 @@
     .res-item { display: grid; grid-template-columns: 60px 1fr auto; gap: 1.5rem; align-items: center; padding: 1.75rem 0; border-bottom: 1px solid var(--line); text-decoration: none; color: inherit; transition: background 0.15s; }
     .res-item:first-child { border-top: 1px solid var(--line); }
     .res-item:hover { background: var(--off); margin: 0 -5%; padding-left: 5%; padding-right: 5%; }
-    .res-num { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--line); }
+    .res-num { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--accent); }
     .res-title { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
     .res-desc { font-size: 0.85rem; color: var(--muted); font-weight: 300; }
     .res-arrow { width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid var(--line); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem; color: var(--muted); transition: background 0.2s, border-color 0.2s, color 0.2s; }
@@ -206,6 +214,23 @@
     .footer-logo { font-family: var(--font-serif); font-size: 1rem; font-weight: 700; color: rgba(255,255,255,0.7); text-decoration: none; }
     .footer-logo em { color: var(--accent); font-style: normal; }
 
+    .proj-label { grid-column: 1 / -1; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 12px; }
+    .proj-label::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+    .bring-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 3rem; }
+    .bring-card { background: var(--off); border: 1px solid var(--line); border-radius: var(--r2); padding: 1.6rem; }
+    .bring-k { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+    .bring-card h3 { font-family: var(--font-serif); font-size: 1.05rem; color: var(--ink); margin-bottom: 0.5rem; line-height: 1.3; }
+    .bring-card p { font-size: 0.88rem; color: var(--ink2); font-weight: 300; line-height: 1.7; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .badge-dot { animation: none; } }
+
+    .proj-more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .55s ease; }
+    .proj-more.open { grid-template-rows: 1fr; }
+    .proj-more > div { overflow: hidden; min-height: 0; visibility: hidden; transition: visibility 0s .55s; }
+    .proj-more.open > div { visibility: visible; transition: visibility 0s; }
+    .proj-more .proj-grid { margin-top: 24px; }
+    .proj-toggle { display: flex; justify-content: center; margin-top: 2.5rem; }
+    .proj-toggle button { cursor: pointer; font-family: inherit; background: var(--white); }
+
     /* REVEAL */
     .reveal { opacity: 1; transform: none; }
 
@@ -220,6 +245,51 @@
       .burger { display: flex; }
       .res-item { grid-template-columns: 40px 1fr auto; }
     }
+
+    /* RECRUITER-FIRST POLISH */
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    section { scroll-margin-top: 72px; }
+    .hero-proof { display:flex; align-items:center; flex-wrap:wrap; gap:10px 18px; margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--muted); font-size:.78rem; }
+    .hero-proof > span:not(.availability)::before { content:'✓'; color:var(--green); font-weight:700; margin-right:7px; }
+    .hero-proof .availability { display:inline-flex; align-items:center; gap:8px; color:var(--ink2); font-weight:600; }
+    .hero-proof .badge-dot { width:7px; height:7px; }
+    .burger { border:0; background:transparent; padding:8px; }
+    .nav-links a:focus-visible, .nav-cta:focus-visible, .btn-solid:focus-visible, .btn-outline:focus-visible { border-radius:6px; }
+    .proj-card, .exp-card, .edu-card, .cert-card { height:100%; }
+    .proj-thumb { background:var(--light); }
+    .proj-card a, .cert-card a { width:fit-content; }
+    @media (max-width: 900px) {
+      #hero { min-height:auto !important; }
+      .hero-skills-card { position:static !important; flex-basis:100% !important; max-width:560px; margin:0 5% 3rem !important; }
+      .hero-left { max-width:100%; }
+      .proj-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+    @media (max-width: 640px) {
+      section { padding:72px 6%; }
+      nav { padding:0 6%; }
+      .nav-links { display:none; }
+      .nav-links.open { display:flex; flex-direction:column; gap:0; position:absolute; top:60px; left:0; right:0; background:#fff; border-bottom:1px solid var(--line); padding:1rem 6%; box-shadow:var(--shadow-md); }
+      .nav-links.open a { display:block; padding:12px 0; border-bottom:1px solid var(--line); font-size:1rem; color:var(--ink); }
+      .nav-cta { display:none; }
+      .burger { display:flex; }
+      #hero { padding-top:5.5rem !important; gap:1.5rem !important; }
+      .hero-left { padding:48px 6% 24px; min-width:0 !important; }
+      .hero-h1 { font-size:clamp(2.7rem,13vw,4rem); }
+      .hero-bio { max-width:none; }
+      .hero-proof { gap:10px 14px; }
+      .hero-skills-card { margin:0 6% 2rem !important; }
+      .proj-grid, .edu-grid, .certs-grid { grid-template-columns:1fr; }
+      .proj-grid { gap:16px; }
+      .exp-card { padding:1.4rem; }
+      .about-row { grid-template-columns:105px 1fr; gap:10px; padding:11px 13px; }
+      .res-item { grid-template-columns:28px 1fr auto; gap:.8rem; }
+      .res-title { font-size:.95rem; }
+      .res-desc { font-size:.8rem; }
+      footer { padding:1.5rem 6%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
+    }
   </style>
 </head>
 <body>
@@ -231,38 +301,40 @@
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#education">Education</a></li>
-    <li><a href="#research">Research</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#research">Research</a></li>
     <li><a href="#certifications">Certifications</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="https://drive.google.com/file/d/1-HsIhty7x4Feb2UohDTY3SoZwTnchHm4/view?usp=drive_link" target="_blank" class="nav-cta">Download CV</a>
-  <div class="burger" id="burger" onclick="document.getElementById('nav-links').classList.toggle('open')">
+  <a href="#contact" data-resume target="_blank" rel="noopener noreferrer" class="nav-cta">Download CV</a>
+  <button class="burger" id="burger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
 
 <!-- HERO -->
 <section id="hero" style="display:flex;align-items:flex-start;justify-content:space-between;gap:4rem;flex-wrap:wrap;padding-top:7rem;padding-bottom:4rem;">
   <div class="hero-left" style="flex:1;min-width:300px;max-width:600px;">
-    <div class="hero-tag">Data Analyst · Sydney, AU</div>
+    <div class="hero-tag">Data Analyst · BI &amp; Reporting · Sydney, AU</div>
     <h1 class="hero-h1">
       Aniket<br>
       <span class="line2">Solanki</span>
     </h1>
     <p class="hero-role"><span id="typing"></span></p>
     <p class="hero-bio">
-      MBAn graduate from UTS with a focus on supply chain and financial analytics. Certified in Power BI (<strong>PL-300</strong>) and <strong>AWS</strong>, with hands-on experience building end-to-end pipelines on Azure and delivering dashboards that drive business decisions.
+      I build Power BI reports, SQL models and data pipelines on Azure and Microsoft Fabric.
     </p>
     <p style="font-size:0.85rem;color:var(--accent);font-weight:500;margin-top:-1rem;margin-bottom:2rem;">
-      Currently seeking Data Analyst or BI Analyst roles across Australia. Full working rights, no sponsorship required.
+      Open to Data Analyst, BI Analyst and Reporting Analyst opportunities across Australia. Full Australian work rights.
     </p>
     <div class="hero-btns">
-      <a href="https://www.linkedin.com/in/aniket-solanki-7618691a6/" target="_blank" class="btn-solid">
+      <a href="#projects" class="btn-solid">View projects →</a>
+      <a href="#contact" data-resume target="_blank" rel="noopener noreferrer" class="btn-outline">Download CV</a>
+      <a href="https://www.linkedin.com/in/aniket-solanki-7618691a6/" target="_blank" rel="noopener noreferrer" class="btn-outline">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
         LinkedIn
       </a>
-      <a href="https://github.com/Aniketsol" target="_blank" class="btn-outline">
+      <a href="https://github.com/Aniketsol" target="_blank" rel="noopener noreferrer" class="btn-outline">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
         GitHub
       </a>
@@ -274,29 +346,17 @@
       <span class="chip">Python</span>
       <span class="chip">Azure</span>
       <span class="chip">AWS</span>
+      <span class="chip">Microsoft Fabric</span>
+      <span class="chip">PySpark</span>
       <span class="chip">Tableau</span>
       <span class="chip">ETL</span>
       <span class="chip">Excel</span>
     </div>
-    <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--line);align-items:center;">
-      <div>
-        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--ink);line-height:1;">10<em style="color:var(--accent);font-style:normal;">+</em></div>
-        <div style="font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:3px;">Projects</div>
-      </div>
-      <div style="width:1px;height:40px;background:var(--line);"></div>
-      <div>
-        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--ink);line-height:1;">2<em style="color:var(--accent);font-style:normal;">+</em></div>
-        <div style="font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:3px;">Certifications</div>
-      </div>
-      <div style="width:1px;height:40px;background:var(--line);"></div>
-      <div>
-        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--ink);line-height:1;">15<em style="color:var(--accent);font-style:normal;">+</em></div>
-        <div style="font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:3px;">Skills</div>
-      </div>
-      <div style="margin-left:auto;display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--line);border-radius:100px;padding:8px 18px;font-size:0.78rem;font-weight:500;color:var(--ink2);">
-        <div class="badge-dot"></div>
-        Open to opportunities
-      </div>
+    <div class="hero-proof" aria-label="Qualifications and availability">
+      <span>UTS Master of Business Analytics</span>
+      <span>Microsoft PL-300</span>
+      <span>AWS Cloud Practitioner</span>
+      <span class="availability"><span class="badge-dot"></span> Open to opportunities</span>
     </div>
   </div>
 
@@ -322,6 +382,7 @@
           <span style="background:var(--green-l);color:var(--green);padding:3px 10px;border-radius:100px;font-size:0.75rem;font-weight:600;">SQL</span>
           <span style="background:var(--green-l);color:var(--green);padding:3px 10px;border-radius:100px;font-size:0.75rem;font-weight:600;">Python</span>
           <span style="background:var(--green-l);color:var(--green);padding:3px 10px;border-radius:100px;font-size:0.75rem;font-weight:600;">ETL Pipelines</span>
+          <span style="background:var(--green-l);color:var(--green);padding:3px 10px;border-radius:100px;font-size:0.75rem;font-weight:600;">PySpark</span>
           <span style="background:var(--green-l);color:var(--green);padding:3px 10px;border-radius:100px;font-size:0.75rem;font-weight:600;">Star Schema</span>
         </div>
       </div>
@@ -330,6 +391,7 @@
         <div style="font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:6px;">Cloud & Platforms</div>
         <div style="display:flex;flex-wrap:wrap;gap:6px;">
           <span style="background:var(--amber-l);color:var(--amber);padding:3px 10px;border-radius:100px;font-size:0.75rem;font-weight:600;">Azure ADF</span>
+          <span style="background:var(--amber-l);color:var(--amber);padding:3px 10px;border-radius:100px;font-size:0.75rem;font-weight:600;">Microsoft Fabric</span>
           <span style="background:var(--amber-l);color:var(--amber);padding:3px 10px;border-radius:100px;font-size:0.75rem;font-weight:600;">AWS</span>
           <span style="background:var(--light);color:var(--muted);padding:3px 10px;border-radius:100px;font-size:0.75rem;font-weight:600;">Excel</span>
           <span style="background:var(--light);color:var(--muted);padding:3px 10px;border-radius:100px;font-size:0.75rem;font-weight:600;">Git</span>
@@ -357,14 +419,19 @@
     <div class="sec-eyebrow">About</div>
     <h2 class="sec-title">Who I am</h2>
   </div>
+  <div class="bring-grid reveal">
+    <div class="bring-card"><div class="bring-k">Report</div><h3>Dashboards people use</h3><p>Power BI reports with DAX, drill-through and KPI cards, built so teams can answer their own questions.</p></div>
+    <div class="bring-card"><div class="bring-k">Model</div><h3>Numbers you can trust</h3><p>SQL and star-schema models with reconciliation and validation, so the report matches the source.</p></div>
+    <div class="bring-card"><div class="bring-k">Pipeline</div><h3>Data that arrives clean</h3><p>Azure, Fabric and AWS pipelines that load, clean and check data on a schedule.</p></div>
+  </div>
   <div class="about-layout">
     <div class="reveal reveal-delay-1">
       <div class="about-body">
         <p>
-          <strong>Data Analyst</strong> with Microsoft <strong>PL-300</strong> &amp; AWS Cloud Practitioner certifications. Proficient in Power BI, DAX, SQL, Python, and cloud-based ETL pipelines, with a proven ability to automate workflows, build scalable data models, and deliver actionable insights that support business decision-making.
+          I'm a <strong>data analyst</strong> based in Sydney with a Master of Business Analytics from UTS. I build <strong>Power BI dashboards, SQL models and data pipelines</strong> using Azure and Microsoft Fabric.
         </p>
         <p>
-          Experienced in equity trading analytics and building executive-ready dashboards across financial and supply chain domains. Comfortable working across the full data stack — from raw ingestion to polished stakeholder reporting.
+          Alongside analytics, I work in warehouse claims, investigating stock discrepancies and tracing where the numbers stop matching. That experience has shaped how I approach data: check the details, understand the problem and make sure the results can be trusted.
         </p>
       </div>
       <dl class="about-table">
@@ -372,7 +439,7 @@
         <div class="about-row"><dt>Education</dt><dd>Master of Business Analytics, UTS</dd></div>
         <div class="about-row"><dt>Location</dt><dd>Parramatta, Sydney AU</dd></div>
         <div class="about-row"><dt>Availability</dt><dd>Open to relocate across Australia</dd></div>
-        <div class="about-row"><dt>Work Rights</dt><dd>Subclass 485 · Full working rights · No sponsorship required (Jan 2029)</dd></div>
+        <div class="about-row"><dt>Work Rights</dt><dd>Full work rights in Australia</dd></div>
         <div class="about-row"><dt>Language</dt><dd>English (Fluent)</dd></div>
         <div class="about-row"><dt>BI Tools</dt><dd>Power BI, DAX, Power Query, Tableau</dd></div>
         <div class="about-row"><dt>Data Eng.</dt><dd>SQL, Python (Pandas, NumPy), ETL Pipelines</dd></div>
@@ -390,46 +457,39 @@
     <h2 class="sec-title">Where I've worked</h2>
   </div>
   <div class="exp-list">
-
-    <div class="exp-card reveal">
-      <div class="exp-header">
-        <div class="exp-role">Reporting &amp; Data Analyst Intern</div>
-        <div class="exp-period">Jul 2023 – Feb 2024</div>
+    <article class="exp-card reveal">
+      <div class="exp-header"><div class="exp-role">Claims Officer</div><div class="exp-period">Sep 2026 – Present</div></div>
+      <div class="exp-company"><strong>PFD Food Services Pty Ltd</strong> · Sydney, NSW</div>
+      <div class="exp-bullets">
+        <div class="exp-bullet">Review customer claims and investigate stock discrepancies, coordinating with warehouse, inventory and transport teams to identify causes and resolve cases.</div>
+        <div class="exp-bullet">Use Excel to analyse claim information, track variances and prepare reporting on claims and stock issues.</div>
+        <div class="exp-bullet">Reconcile physical stock and system records across MFG/PRO, Manhattan, MobileDock and LumiChain to support accurate inventory records.</div>
+        <div class="exp-bullet">Support warehouse and dispatch administration through operational systems and accurate record keeping.</div>
       </div>
+      <div class="exp-tags"><span class="ptag ptag-gray">Excel</span><span class="ptag ptag-gray">MFG/PRO</span><span class="ptag ptag-gray">Manhattan</span><span class="ptag ptag-gray">MobileDock</span><span class="ptag ptag-gray">LumiChain</span><span class="ptag ptag-gray">Reconciliation</span></div>
+    </article>
+
+    <article class="exp-card reveal reveal-delay-1">
+      <div class="exp-header"><div class="exp-role">Reporting &amp; Data Analyst Intern</div><div class="exp-period">Jul 2023 – Feb 2024</div></div>
       <div class="exp-company"><strong>Kalash Shares &amp; Securities</strong> · India</div>
       <div class="exp-bullets">
         <div class="exp-bullet">Built 3 Power BI dashboards tracking portfolio performance and account-level KPIs, enabling weekly rebalancing decisions by senior analysts and replacing manual Excel reporting for 50+ client accounts.</div>
         <div class="exp-bullet">Validated and reconciled 10,000+ financial records using SQL to ensure reporting accuracy across monthly client performance reviews, reducing data discrepancies by 30%.</div>
         <div class="exp-bullet">Integrated SQL and Excel data sources via Power Query and developed DAX-based KPI measures to support consistent stakeholder reporting, cutting weekly manual reporting time by 25%.</div>
       </div>
-      <div class="exp-tags">
-        <span class="ptag ptag-blue">Power BI</span>
-        <span class="ptag ptag-blue">DAX</span>
-        <span class="ptag ptag-green">Python</span>
-        <span class="ptag ptag-blue">SQL</span>
-        <span class="ptag ptag-gray">Power Query</span>
-        <span class="ptag ptag-gray">Excel</span>
-      </div>
-    </div>
+      <div class="exp-tags"><span class="ptag ptag-blue">Power BI</span><span class="ptag ptag-blue">DAX</span><span class="ptag ptag-green">SQL</span><span class="ptag ptag-green">Python</span><span class="ptag ptag-gray">Power Query</span><span class="ptag ptag-gray">Excel</span></div>
+    </article>
 
-    <div class="exp-card reveal reveal-delay-1">
-      <div class="exp-header">
-        <div class="exp-role">Warehouse &amp; Inventory Assistant</div>
-        <div class="exp-period">Sep 2024 – Present</div>
-      </div>
-      <div class="exp-company"><strong>The Fruit Box Group</strong> · Sydney, AU</div>
+    <article class="exp-card reveal reveal-delay-2">
+      <div class="exp-header"><div class="exp-role">Warehouse &amp; Inventory Assistant</div><div class="exp-period">Jul 2024 – Aug 2026</div></div>
+      <div class="exp-company"><strong>The Fruit Box Group</strong> · Sydney, NSW</div>
       <div class="exp-bullets">
-        <div class="exp-bullet">Part-time operational role undertaken alongside MBAn studies at UTS (completed Dec 2025).</div>
-        <div class="exp-bullet">Utilise NetSuite ERP to manage real-time inventory tracking, stock updates, and order fulfilment.</div>
-        <div class="exp-bullet">Conduct regular stock-takes and audits to maintain accuracy between physical inventory and system records.</div>
+        <div class="exp-bullet">Completed stocktakes and reconciled physical counts against system records, investigating discrepancies.</div>
+        <div class="exp-bullet">Recorded stock movements and maintained inventory counts in NetSuite ERP.</div>
+        <div class="exp-bullet">Checked incoming and outgoing produce for quality and supported order fulfilment.</div>
       </div>
-      <div class="exp-tags">
-        <span class="ptag ptag-gray">NetSuite ERP</span>
-        <span class="ptag ptag-gray">Inventory Management</span>
-        <span class="ptag ptag-gray">Operations</span>
-      </div>
-    </div>
-
+      <div class="exp-tags"><span class="ptag ptag-gray">NetSuite ERP</span><span class="ptag ptag-gray">Inventory Management</span><span class="ptag ptag-gray">Stock Reconciliation</span><span class="ptag ptag-gray">Operations</span></div>
+    </article>
   </div>
 </section>
 
@@ -458,7 +518,133 @@
   </div>
 </section>
 
-<!-- RESEARCH — moved above Projects -->
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="reveal">
+    <div class="sec-eyebrow">Projects</div>
+    <h2 class="sec-title">Work I'm proud of</h2>
+    <p class="sec-sub">The six projects most relevant to data, BI and reporting roles. The rest are one click away.</p>
+  </div>
+  <div class="proj-grid">
+    <div class="proj-card reveal">
+      <img loading="lazy" decoding="async" src="images/proj_azure.png" alt="ADF Pipeline" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">ADF Pipeline</div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="ptag ptag-blue">Azure</span><span class="ptag ptag-gray">ADF</span><span class="ptag ptag-green">ETL</span><span class="ptag ptag-amber">SQL</span></div>
+        <div class="proj-title">Azure Data Factory ETL Pipeline &amp; Power BI Reporting</div>
+        <p class="proj-desc">End-to-end ADF pipeline ingesting live retail data from REST API → Azure Blob Storage → Data Flow transformations (null filtering, text cleaning, nested JSON flattening) → Azure SQL Database. Automated with daily triggers.</p>
+        <a href="https://youtu.be/k9bh0fMdX_Y" target="_blank" rel="noopener noreferrer" class="proj-link">Watch Demo →</a>
+        <a href="https://github.com/Aniketsol/azure-adf-retail-pipeline" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+  <img loading="lazy" decoding="async" src="images/proj_fabric.png" alt="Fabric Sales Reporting Solution" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+  <div class="proj-thumb-ph" style="display:none">Fabric Pipeline</div>
+  <div class="proj-body">
+    <div class="proj-tags"><span class="ptag ptag-blue">Microsoft Fabric</span><span class="ptag ptag-green">PySpark</span><span class="ptag ptag-blue">Power BI</span><span class="ptag ptag-amber">SQL</span></div>
+    <div class="proj-title">Microsoft Fabric Sales Reporting Solution</div>
+    <p class="proj-desc">On-prem SQL Server connected through a data gateway into a Bronze–Silver–Gold lakehouse. Incremental copy for CRM tables, PySpark Delta MERGE upserts with deduplication, a Kimball star schema, and a Power BI report on Direct Lake. Orchestrated by a daily pipeline with 10 automated data quality checks logged to a Delta table.</p>
+    <a href="https://github.com/Aniketsol/fabric-sales-reporting-solution" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
+  </div>
+</div>
+
+    <div class="proj-card reveal">
+      <img loading="lazy" decoding="async" src="images/Architecture.png" alt="Enterprise DW" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">Enterprise DW</div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="ptag ptag-blue">SQL</span><span class="ptag ptag-gray">ETL</span><span class="ptag ptag-gray">Analytics</span></div>
+        <div class="proj-title">SQL Data Warehouse &amp; ETL Pipeline</div>
+        <p class="proj-desc">Full Bronze–Silver–Gold SQL data warehouse pipeline with Kimball star schema modelling. T-SQL data cleaning, joins, aggregations, and NULL handling for analytics-ready datasets.</p>
+        <a href="https://github.com/Aniketsol/Enterprise-Data-Warehouse-SQL-ETL-Analytics-Pipeline" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
+      </div>
+    </div>
+
+    <div class="proj-card reveal reveal-delay-1">
+      <img loading="lazy" decoding="async" src="images/proj_samsung.png" alt="Samsung Supply Chain Dashboard" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">Samsung Supply Chain</div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="ptag ptag-blue">Power BI</span><span class="ptag ptag-blue">DAX</span><span class="ptag ptag-gray">Star Schema</span><span class="ptag ptag-amber">Supply Chain</span></div>
+        <div class="proj-title">Samsung Supply Chain &amp; Logistics Power BI Dashboard</div>
+        <p class="proj-desc">Multi-fact star schema with 5 fact tables and 5 dimension tables across 100,000+ records. DAX measures for YoY revenue variance, supplier risk classification, stockout risk %, and profit margin %. 5-page interactive report with drill-through navigation and KPI cards.</p>
+        <a href="https://github.com/Aniketsol/samsung-supply-chain-powerbi" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <img loading="lazy" decoding="async" src="images/proj_1.jpg" alt="Pizza Analytics" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">Pizza Analytics</div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="ptag ptag-blue">Power BI</span><span class="ptag ptag-blue">SQL</span></div>
+        <div class="proj-title">Pizza Store Data Analysis &amp; Visualisation</div>
+        <p class="proj-desc">Advanced SQL queries on pizza store data to identify growth gaps, paired with an interactive Power BI dashboard.</p>
+        <a href="https://www.youtube.com/watch?v=MPCfWtc-vGk" target="_blank" rel="noopener noreferrer" class="proj-link">Watch Demo →</a>
+      </div>
+    </div>
+
+    <div class="proj-card reveal reveal-delay-2">
+      <img loading="lazy" decoding="async" src="images/proj_4.jpg" alt="HR Dashboard" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">HR Dashboard</div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="ptag ptag-blue">Power BI</span><span class="ptag ptag-gray">HR Analytics</span></div>
+        <div class="proj-title">Power BI HR Analytics Dashboard</div>
+        <p class="proj-desc">Interactive HR dashboard with deep insights into employee attrition, department trends, and workforce performance metrics.</p>
+        <a href="https://github.com/Aniketsol/Hr-Analytics-Dashboard-" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
+      </div>
+    </div>
+  </div>
+  <div class="proj-more" id="more-projects"><div>
+    <div class="proj-grid">
+        <div class="proj-card reveal reveal-delay-1">
+      <img loading="lazy" decoding="async" src="images/proj_aws.png" alt="AWS Analytics" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">AWS Analytics</div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="ptag ptag-amber">AWS</span><span class="ptag ptag-blue">Power BI</span><span class="ptag ptag-green">Python</span></div>
+        <div class="proj-title">AWS Analytics Pipeline &amp; Power BI Reporting</div>
+        <p class="proj-desc">Serverless pipeline using S3, AWS Glue &amp; Athena delivering Power BI dashboards with 98% validated data accuracy. Automated schema detection with Python, improving ETL efficiency by 25%.</p>
+        <a href="https://youtu.be/JFt5xVfZi3Q" target="_blank" rel="noopener noreferrer" class="proj-link">Watch Demo →</a>
+      </div>
+    </div>
+
+        <div class="proj-card reveal reveal-delay-2">
+      <img loading="lazy" decoding="async" src="images/proj_etl.jpeg" alt="Payments ETL" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">Payments ETL</div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="ptag ptag-green">Python</span><span class="ptag ptag-blue">MySQL</span><span class="ptag ptag-gray">Automation</span></div>
+        <div class="proj-title">Enterprise Payments ETL &amp; Analytics Platform</div>
+        <p class="proj-desc">Incremental Python ETL pipelines with scheduled refreshes and scalable MySQL schema. DAX measures for YoY growth, margin analysis, and KPI comparisons.</p>
+        <a href="https://github.com/Aniketsol/Automated-Payments-ETL" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7396063660542013440/" target="_blank" rel="noopener noreferrer" class="proj-link">View on LinkedIn →</a>
+      </div>
+    </div>
+
+        <div class="proj-card reveal reveal-delay-1">
+      <img loading="lazy" decoding="async" src="images/proj_6.jpg" alt="eCommerce" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">eCommerce Analytics</div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="ptag ptag-blue">SQL</span><span class="ptag ptag-gray">Web Analytics</span></div>
+        <div class="proj-title">eCommerce Website Analytics</div>
+        <p class="proj-desc">SQL-driven analysis of traffic sources, device usage, ad conversions, and revenue attribution for a Teddy eCommerce store.</p>
+        <a href="https://github.com/Aniketsol/ecommerce-web-analytics" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
+      </div>
+    </div>
+
+        <div class="proj-card reveal">
+      <img loading="lazy" decoding="async" src="images/proj_3.jpg" alt="Sales Dashboard" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-thumb-ph" style="display:none">Sales Dashboard</div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="ptag ptag-blue">Power BI</span><span class="ptag ptag-gray">Sales</span></div>
+        <div class="proj-title">Power BI Sales Dashboard Project</div>
+        <p class="proj-desc">Retail store dashboard to track and analyze online sales data with drill-through capabilities and dynamic filters.</p>
+        <a href="https://github.com/Aniketsol/Data-Visualization-for-company" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
+      </div>
+    </div>
+    </div>
+  </div></div>
+  <div class="proj-toggle"><button type="button" class="btn-outline" id="more-btn" aria-expanded="false" aria-controls="more-projects">Show more projects (4)</button></div>
+</section>
+
+<!-- RESEARCH -->
 <section id="research">
   <div class="reveal">
     <div class="sec-eyebrow">Research</div>
@@ -501,119 +687,6 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="reveal">
-    <div class="sec-eyebrow">Projects</div>
-    <h2 class="sec-title">Work I'm proud of</h2>
-    <p class="sec-sub">Data engineering, analytics dashboards, and end-to-end pipelines built with SQL, Python, Power BI, AWS, and Azure.</p>
-  </div>
-  <div class="proj-grid">
-
-    <div class="proj-card reveal">
-      <img src="images/proj_azure.png" alt="ADF Pipeline" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="proj-thumb-ph" style="display:none">ADF Pipeline</div>
-      <div class="proj-body">
-        <div class="proj-tags"><span class="ptag ptag-blue">Azure</span><span class="ptag ptag-gray">ADF</span><span class="ptag ptag-green">ETL</span><span class="ptag ptag-amber">SQL</span></div>
-        <div class="proj-title">Azure Data Factory ETL Pipeline &amp; Power BI Reporting</div>
-        <p class="proj-desc">End-to-end ADF pipeline ingesting live retail data from REST API → Azure Blob Storage → Data Flow transformations (null filtering, text cleaning, nested JSON flattening) → Azure SQL Database. Automated with daily triggers.</p>
-        <a href="https://youtu.be/k9bh0fMdX_Y" target="_blank" class="proj-link">Watch Demo →</a>
-        <a href="https://github.com/Aniketsol/azure-adf-retail-pipeline" target="_blank" class="proj-link">View on GitHub →</a>
-      </div>
-    </div>
-
-    <div class="proj-card reveal reveal-delay-1">
-      <img src="images/proj_samsung.png" alt="Samsung Supply Chain Dashboard" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="proj-thumb-ph" style="display:none">Samsung Supply Chain</div>
-      <div class="proj-body">
-        <div class="proj-tags"><span class="ptag ptag-blue">Power BI</span><span class="ptag ptag-blue">DAX</span><span class="ptag ptag-gray">Star Schema</span><span class="ptag ptag-amber">Supply Chain</span></div>
-        <div class="proj-title">Samsung Supply Chain &amp; Logistics Power BI Dashboard</div>
-        <p class="proj-desc">Multi-fact star schema with 5 fact tables and 5 dimension tables across 100,000+ records. DAX measures for YoY revenue variance, supplier risk classification, stockout risk %, and profit margin %. 5-page interactive report with drill-through navigation and KPI cards.</p>
-        <a href="https://github.com/Aniketsol/samsung-supply-chain-powerbi" target="_blank" class="proj-link">View on GitHub →</a>
-      </div>
-    </div>
-
-    <div class="proj-card reveal">
-      <img src="images/Architecture.png" alt="Enterprise DW" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="proj-thumb-ph" style="display:none">Enterprise DW</div>
-      <div class="proj-body">
-        <div class="proj-tags"><span class="ptag ptag-blue">SQL</span><span class="ptag ptag-gray">ETL</span><span class="ptag ptag-gray">Analytics</span></div>
-        <div class="proj-title">SQL Data Warehouse &amp; ETL Pipeline</div>
-        <p class="proj-desc">Full Bronze–Silver–Gold SQL data warehouse pipeline with Kimball star schema modelling. T-SQL data cleaning, joins, aggregations, and NULL handling for analytics-ready datasets.</p>
-        <a href="https://github.com/Aniketsol/Enterprise-Data-Warehouse-SQL-ETL-Analytics-Pipeline" target="_blank" class="proj-link">View on GitHub →</a>
-      </div>
-    </div>
-
-    <div class="proj-card reveal reveal-delay-1">
-      <img src="images/proj_aws.png" alt="AWS Analytics" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="proj-thumb-ph" style="display:none">AWS Analytics</div>
-      <div class="proj-body">
-        <div class="proj-tags"><span class="ptag ptag-amber">AWS</span><span class="ptag ptag-blue">Power BI</span><span class="ptag ptag-green">Python</span></div>
-        <div class="proj-title">AWS Analytics Pipeline &amp; Power BI Reporting</div>
-        <p class="proj-desc">Serverless pipeline using S3, AWS Glue &amp; Athena delivering Power BI dashboards with 98% validated data accuracy. Automated schema detection with Python, improving ETL efficiency by 25%.</p>
-        <a href="https://youtu.be/JFt5xVfZi3Q" target="_blank" class="proj-link">Watch Demo →</a>
-      </div>
-    </div>
-
-    <div class="proj-card reveal reveal-delay-2">
-      <img src="images/proj_etl.jpeg" alt="Payments ETL" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="proj-thumb-ph" style="display:none">Payments ETL</div>
-      <div class="proj-body">
-        <div class="proj-tags"><span class="ptag ptag-green">Python</span><span class="ptag ptag-blue">MySQL</span><span class="ptag ptag-gray">Automation</span></div>
-        <div class="proj-title">Enterprise Payments ETL &amp; Analytics Platform</div>
-        <p class="proj-desc">Incremental Python ETL pipelines with scheduled refreshes and scalable MySQL schema. DAX measures for YoY growth, margin analysis, and KPI comparisons.</p>
-        <a href="https://github.com/Aniketsol/Automated-Payments-ETL" target="_blank" class="proj-link">View on GitHub →</a>
-        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7396063660542013440/" target="_blank" class="proj-link">View on LinkedIn →</a>
-      </div>
-    </div>
-
-    <div class="proj-card reveal">
-      <img src="images/proj_1.jpg" alt="Pizza Analytics" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="proj-thumb-ph" style="display:none">Pizza Analytics</div>
-      <div class="proj-body">
-        <div class="proj-tags"><span class="ptag ptag-blue">Power BI</span><span class="ptag ptag-blue">SQL</span></div>
-        <div class="proj-title">Pizza Store Data Analysis &amp; Visualisation</div>
-        <p class="proj-desc">Advanced SQL queries on pizza store data to identify growth gaps, paired with an interactive Power BI dashboard.</p>
-        <a href="https://www.youtube.com/watch?v=MPCfWtc-vGk" target="_blank" class="proj-link">Watch Demo →</a>
-      </div>
-    </div>
-
-    <div class="proj-card reveal reveal-delay-1">
-      <img src="images/proj_6.jpg" alt="eCommerce" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="proj-thumb-ph" style="display:none">eCommerce Analytics</div>
-      <div class="proj-body">
-        <div class="proj-tags"><span class="ptag ptag-blue">SQL</span><span class="ptag ptag-gray">Web Analytics</span></div>
-        <div class="proj-title">eCommerce Website Analytics</div>
-        <p class="proj-desc">SQL-driven analysis of traffic sources, device usage, ad conversions, and revenue attribution for a Teddy eCommerce store.</p>
-        <a href="https://github.com/Aniketsol/ecommerce-web-analytics" target="_blank" class="proj-link">View on GitHub →</a>
-      </div>
-    </div>
-
-    <div class="proj-card reveal reveal-delay-2">
-      <img src="images/proj_4.jpg" alt="HR Dashboard" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="proj-thumb-ph" style="display:none">HR Dashboard</div>
-      <div class="proj-body">
-        <div class="proj-tags"><span class="ptag ptag-blue">Power BI</span><span class="ptag ptag-gray">HR Analytics</span></div>
-        <div class="proj-title">Power BI HR Analytics Dashboard</div>
-        <p class="proj-desc">Interactive HR dashboard with deep insights into employee attrition, department trends, and workforce performance metrics.</p>
-        <a href="https://github.com/Aniketsol/Hr-Analytics-Dashboard-" target="_blank" class="proj-link">View on GitHub →</a>
-      </div>
-    </div>
-
-    <div class="proj-card reveal">
-      <img src="images/proj_3.jpg" alt="Sales Dashboard" class="proj-thumb" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="proj-thumb-ph" style="display:none">Sales Dashboard</div>
-      <div class="proj-body">
-        <div class="proj-tags"><span class="ptag ptag-blue">Power BI</span><span class="ptag ptag-gray">Sales</span></div>
-        <div class="proj-title">Power BI Sales Dashboard Project</div>
-        <p class="proj-desc">Retail store dashboard to track and analyze online sales data with drill-through capabilities and dynamic filters.</p>
-        <a href="https://github.com/Aniketsol/Data-Visualization-for-company" target="_blank" class="proj-link">View on GitHub →</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 <!-- CERTIFICATIONS -->
 <section id="certifications">
   <div class="reveal">
@@ -627,15 +700,15 @@
         <div class="cert-name">AWS Certified Cloud Practitioner</div>
         <div class="cert-by">Amazon Web Services</div>
       </div>
-      <a href="https://www.credly.com/badges/c7937bd7-120a-423d-ae0c-7caeed6b6f50/public_url" target="_blank" class="cert-link">View credential →</a>
+      <a href="https://www.credly.com/badges/c7937bd7-120a-423d-ae0c-7caeed6b6f50/public_url" target="_blank" rel="noopener noreferrer" class="cert-link">View credential →</a>
     </div>
     <div class="cert-card reveal reveal-delay-1">
       <div class="cert-logo">📊</div>
       <div>
-        <div class="cert-name">PL-300: Microsoft Power BI Data Analyst</div>
+        <div class="cert-name">Microsoft Certified: Power BI Data Analyst Associate (PL-300)</div>
         <div class="cert-by">Microsoft</div>
       </div>
-      <a href="https://learn.microsoft.com/api/credentials/share/en-us/AniketVipulSolanki-0194/1A8999F9A024175C?sharingId=41C4D83AD84F67F6" target="_blank" class="cert-link">View credential →</a>
+      <a href="https://learn.microsoft.com/api/credentials/share/en-us/AniketVipulSolanki-0194/1A8999F9A024175C?sharingId=41C4D83AD84F67F6" target="_blank" rel="noopener noreferrer" class="cert-link">View credential →</a>
     </div>
   </div>
 </section>
@@ -652,17 +725,17 @@
       <div class="ci-icon">✉️</div>
       <div><div class="ci-lbl">Email</div><div class="ci-val">aniketsol2401@gmail.com</div></div>
     </a>
-    <a href="https://www.linkedin.com/in/aniket-solanki-7618691a6/" target="_blank" class="ci" style="flex:1;min-width:220px;">
+    <a href="https://www.linkedin.com/in/aniket-solanki-7618691a6/" target="_blank" rel="noopener noreferrer" class="ci" style="flex:1;min-width:220px;">
       <div class="ci-icon" style="font-size:0.9rem;font-weight:700;">in</div>
       <div><div class="ci-lbl">LinkedIn</div><div class="ci-val">linkedin.com/in/aniket-solanki-7618691a6</div></div>
     </a>
-    <a href="https://github.com/Aniketsol" target="_blank" class="ci" style="flex:1;min-width:220px;">
+    <a href="https://github.com/Aniketsol" target="_blank" rel="noopener noreferrer" class="ci" style="flex:1;min-width:220px;">
       <div class="ci-icon">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.7"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
       </div>
       <div><div class="ci-lbl">GitHub</div><div class="ci-val">github.com/Aniketsol</div></div>
     </a>
-    <a href="https://drive.google.com/file/d/1-HsIhty7x4Feb2UohDTY3SoZwTnchHm4/view?usp=drive_link" target="_blank" class="ci" style="flex:1;min-width:220px;">
+    <a href="#contact" data-resume target="_blank" rel="noopener noreferrer" class="ci" style="flex:1;min-width:220px;">
       <div class="ci-icon">📄</div>
       <div><div class="ci-lbl">Resume</div><div class="ci-val">Download PDF</div></div>
     </a>
@@ -672,30 +745,62 @@
 <!-- FOOTER -->
 <footer>
   <a href="#hero" class="footer-logo">Aniket <em>Solanki</em></a>
-  <p>© 2026 Aniket Solanki · Power BI Data Analyst · Sydney, AU</p>
+  <p>© 2026 Aniket Solanki · Data Analyst &amp; BI · Sydney, Australia</p>
 </footer>
 
 <script>
+  // ===== RESUME LINK: change it ONLY here =====
+  const RESUME_URL = 'https://drive.google.com/file/d/1-HsIhty7x4Feb2UohDTY3SoZwTnchHm4/view?usp=drive_link';
+  document.querySelectorAll('[data-resume]').forEach(a => { a.href = RESUME_URL; });
+  // ============================================
   const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => nav.classList.toggle('up', scrollY > 30));
+  const navLinks = document.getElementById('nav-links');
+  const burger = document.getElementById('burger');
+  window.addEventListener('scroll', () => nav.classList.toggle('up', window.scrollY > 30), { passive: true });
 
-  const el = document.getElementById('typing');
-  const phrases = ['Power BI Data Analyst', 'SQL & ETL Engineer', 'AWS Cloud Analytics', 'Data Storyteller'];
-  let pi = 0, ci = 0, del = false;
-  function type() {
-    const p = phrases[pi];
-    if (!del) { el.textContent = p.slice(0, ++ci); if (ci === p.length) { del = true; return setTimeout(type, 2200); } }
-    else { el.textContent = p.slice(0, --ci); if (!ci) { del = false; pi = (pi+1) % phrases.length; } }
-    setTimeout(type, del ? 42 : 85);
+  burger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    burger.setAttribute('aria-expanded', String(isOpen));
+    burger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+  });
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-label', 'Open navigation menu');
+  }));
+
+  const typingEl = document.getElementById('typing');
+  const phrases = ['Data Analyst', 'Business Intelligence Analyst', 'Reporting Analyst', 'Power BI · SQL · Python'];
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (typingEl && reduceMotion) {
+    typingEl.textContent = phrases[0];
+  } else if (typingEl) {
+    let phraseIndex = 0, charIndex = 0, deleting = false;
+    function type() {
+      const phrase = phrases[phraseIndex];
+      typingEl.textContent = phrase.slice(0, charIndex);
+      if (!deleting && charIndex < phrase.length) charIndex++;
+      else if (deleting && charIndex > 0) charIndex--;
+      else if (!deleting) { deleting = true; setTimeout(type, 1500); return; }
+      else { deleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; }
+      setTimeout(type, deleting ? 35 : 75);
+    }
+    type();
   }
-  type();
 
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+  const moreBtn = document.getElementById('more-btn');
+  const morePanel = document.getElementById('more-projects');
+  if (moreBtn && morePanel) {
+    const n = morePanel.querySelectorAll('.proj-card').length;
+    const label = 'Show more projects (' + n + ')';
+    moreBtn.textContent = label;
+    moreBtn.addEventListener('click', () => {
+      const open = morePanel.classList.toggle('open');
+      moreBtn.setAttribute('aria-expanded', String(open));
+      moreBtn.textContent = open ? 'Show fewer projects' : label;
+      if (!open) document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
     });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  }
 </script>
 </body>
 </html>
